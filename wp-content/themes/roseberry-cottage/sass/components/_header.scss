@@ -1,0 +1,53 @@
+#top-band{
+	background-color: $blue-grey;
+	color: white;
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	display: block;
+	z-index:9999;
+}
+#header{
+	background-color: $blue-grey;
+	padding: $helper-standard 0;
+	.home &{
+		padding: $helper-thicker 0 $helper-thick;
+	}
+
+	text-align: center;
+	.home &{
+		background-color: white;
+	}
+	h2{
+		margin-bottom: 0;
+		padding: 0 20px;
+		@media #{$medium-up} { 
+			padding:0;
+		}
+	}
+}
+#home-link{
+	width: 200px;
+	.home &{
+		width:220px;	
+	}
+	height: auto;
+	display:inline-block; 
+	.home &{
+		margin-bottom: $helper-thick;
+	}
+	@media #{$medium-up}{
+		.home &{
+			width:250px;	
+		}
+	}
+	@media #{$xxlarge-up} { 
+		.home &{
+			width:300px;
+			margin-bottom: $helper-thicker;
+		}
+	}
+}
+
+

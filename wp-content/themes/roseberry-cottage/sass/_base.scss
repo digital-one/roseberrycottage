@@ -1,0 +1,23 @@
+html{
+	
+}
+body{
+	width:100%;
+	overflow-x:hidden;
+	font-family: $verlag-light;
+	font-weight:normal;
+	color: $grey;
+	background-color:$light-grey;
+	@include font-size(16px);
+	/*
+	font-size: $base-font-size-small;
+	line-height:$base-line-height-small;
+	@media #{$xlarge-up} { 
+		font-size: $base-font-size;
+		line-height:$base-line-height;
+	}
+	*/
+	// /-webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

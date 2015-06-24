@@ -1,0 +1,18 @@
+@mixin font-header{
+	display:inline-block;
+	margin:0 auto;
+	position: relative;
+	padding-bottom:10px;
+	margin-bottom:8px;
+	&:before{
+		content:"";
+		width:80%;
+		display: block;
+		height:1px;
+		background-color: $dark-grey;
+		@include abs-pos(auto,auto,0,10%);
+	}
+	&:after{
+
+	}
+}

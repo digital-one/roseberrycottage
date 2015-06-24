@@ -1,0 +1,25 @@
+.main-container{
+	width:100%;
+	padding: 0;
+	@media #{$small-up} { 
+		max-width: em-calc(449);
+	}
+	@media #{$medium-up} { 
+		max-width: em-calc(569);
+	}
+	@media #{$large-up} { 
+		max-width: em-calc(740);
+	}
+	@media #{$xlarge-up} { 
+		max-width: em-calc(962);
+	}
+	@media #{$xxlarge-up} { 
+		max-width: em-calc(1260);   
+	}
+}
+.main-section{
+	position: relative;
+}
+
+
+

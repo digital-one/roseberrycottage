@@ -1,0 +1,54 @@
+@mixin button_base {
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  cursor:pointer;
+  font-family: $verlag-bold;
+  @include transition(color .3s ease, border-color .3s ease, background-color .3 ease);
+}
+@mixin button_primary {
+  background-color: $blue-grey;
+  border: none;
+  color: white;
+  &:link,&:visited{
+    color: white;
+  }
+  &:hover,&:active{
+    background-color: darken($blue-grey,10%);
+  }
+}
+@mixin button_outline{
+  border: 1px solid $grey;
+  background-color: transparent;
+  &:link,&:visited{
+    color: $grey;
+  }
+  &:hover,&:active{
+    color: $dark-grey;
+    border-color: $dark-grey;
+  }
+}
+@mixin button_outline_white {
+  border: 1px solid white;
+  &:link,&:visited{
+    color: white;
+  }
+  &:hover,&:active{
+    color:  darken(white,10%);
+    border-color: darken(white,10%);
+  }
+}
+@mixin button_large {
+  height:56px;
+  padding:0 30px;
+  line-height: 54px;
+  font-size: $h4-font-size-large;
+}
+@mixin button_small {
+  height:40px;
+  padding:0 20px;
+  line-height: 38px;
+  font-size: $h4-font-size;
+}

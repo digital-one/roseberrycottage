@@ -1,0 +1,125 @@
+#footer{
+	background-color: $dark-blue-grey;
+	color: white;
+	text-align:center;
+	@include font-size(12px);
+	li{
+		padding: 0 5px;
+	}
+	a{
+		&:link,&:visited{
+			color: white;
+			text-decoration: none;
+		}
+	}
+	.top{
+		padding:30px 40px;
+		@media #{$medium-up} {
+			padding:30px 0;
+		}
+		position: relative;
+		.inner-wrap{
+			position: relative;
+		}
+	}
+	.bottom{
+		border-top:1px solid darken(white,40%);
+		padding: 15px 0;
+		small{
+			
+			height:30px;
+			line-height: 30px;
+			@media #{$medium-up} {
+				float: left;
+			}
+		}
+	}
+	p{
+		margin-bottom: 0;
+		z-index: 2;
+		@include font-size(12px);
+		@media #{$medium-up} {
+			@include font-size(14px);
+		}
+		font-family: $verlag-book;
+	}
+}
+nav#footer-links{
+	@include centered-menu;
+	font-family: $verlag-bold;
+	margin-bottom: 10px;
+	z-index: 2;
+	position: relative;
+}
+.logos-left,.logos-right{
+	text-align:left;
+	a{
+		display: inline-block;
+		margin:0 10px 0 0;
+	}
+}
+.logos-right{
+	text-align: right;
+	a{
+		margin: 0 0 0 10px;	
+	}
+}
+menu.social{
+	@include inline-menu;
+	margin:0 auto;
+	display: inline-block;
+	@media #{$medium-up} {
+		float: right;
+		margin:0;
+	}
+	a{
+		&:link,&:visited{
+			display: block;
+			@include transition(background-color .2s ease);
+			width:30px;
+			height:30px;
+			@include border-radius(50%);
+			background-color: rgba(255,255,255,.5);
+			line-height: 30px;
+			text-align: center;
+			color: $dark-blue-grey;
+			&:before{
+				width:30px;
+				height:30px;
+				display: block;
+				line-height: 30px;
+				text-align: center;
+				color: $dark-blue-grey;
+				@include font-size(20px);
+			}
+		}
+		&:hover,&:active{
+			background-color: rgba(255,255,255,1);
+		}
+	}
+}
+#tourist-links{
+	position: relative;
+	text-align: center;
+	padding: 20px 0 0;
+	@media #{$xlarge-up} { 
+		@include abs-pos(0,auto,auto,0);
+		text-align: left;
+		padding: 0;
+	}
+	display: block;
+	width:100%;
+	z-index: 1;
+	a{
+		margin: 0 10px;
+		@media #{$xlarge-up} { 
+			margin: 0 15px 0 0;
+		}
+		&:last-child{
+			@media #{$xlarge-up} { 
+				@include abs-pos(0,0,auto,auto);
+				margin: 0 0 0 15px;
+			}
+		}
+	}
+}

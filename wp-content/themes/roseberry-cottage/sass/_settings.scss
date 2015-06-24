@@ -1,0 +1,99 @@
+$xsmall-breakpoint: em-calc(480) !default;
+$small-breakpoint:  em-calc(600)  !default;
+$medium-breakpoint: em-calc(770) !default;
+$large-breakpoint:  em-calc(992) !default;
+$xlarge-breakpoint: rem-calc(1260) !default;
+
+// Here we define the lower and upper bounds for each media size
+$xsmall-range:  (0, $xsmall-breakpoint) !default; /* 0 - 480px */
+$small-range:  ($xsmall-breakpoint  + em-calc(1), $small-breakpoint) !default; /* 481px, 600px */
+$medium-range:   ($small-breakpoint + em-calc(1), $medium-breakpoint) !default; /* 601px, 770px */
+$large-range:  ($medium-breakpoint  + em-calc(1), $large-breakpoint) !default; /* 771px, 992px */
+$xlarge-range: ($large-breakpoint + em-calc(1), $xlarge-breakpoint) !default; /* 993px, 1260px */
+$xxlarge-range: ($xlarge-breakpoint + rem-calc(1), rem-calc(99999999)) !default; /* 1260px, ... */
+
+$column-gutter: em-calc(30); //30px
+$block-grid-default-spacing: em-calc(20);
+$total-columns: 12;
+$row-width: em-calc(1260); //1260px
+
+// Media Queries
+$screen: "only screen" !default;
+
+$landscape: "#{$screen} and (orientation: landscape)" !default;
+$portrait: "#{$screen} and (orientation: portrait)" !default;
+
+$xsmall-up: $screen !default;
+$xsmall-only: "#{$screen} and (max-width: #{upper-bound($xsmall-range)})" !default;
+
+$small-up: "#{$screen} and (min-width:#{lower-bound($small-range)})" !default;
+$small-only: "#{$screen} and (min-width:#{lower-bound($small-range)}) and (max-width:#{upper-bound($small-range)})" !default;
+
+$medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})" !default;
+$medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})" !default;
+
+$large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})" !default;
+$large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})" !default;
+
+$xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})" !default;
+$xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})" !default;
+
+$xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})" !default;
+$xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})" !default;
+
+
+//Colours
+
+$light-grey: #ececec;
+$blue-grey: #67aebf;
+$dark-blue-grey: #45747f;
+$dark-grey: #1d1d1d;
+$light-blue: #d5edf3;
+$grey: #595959;
+$vertical-space: 60px;
+
+
+//fonts
+$lato : 'Lato', sans-serif; 
+$verlag-light : 'Verlag-Light-webfont', sans-serif;
+$verlag-book : 'Verlag-Book-webfont', sans-serif;
+$verlag-bold : 'Verlag-Bold-webfont', sans-serif;
+$libre: 'Libre Baskerville', serif;
+$helvetica: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+
+/* Typography */
+
+$base-font-size: rem-calc(16);
+$base-font-size-small: rem-calc(14);
+$base-line-height: 140%; 
+$base-line-height-small: 130%;
+$large-font-size: rem-calc(36);
+$h1-font-size: rem-calc(30) !default;
+$h1-font-size-large: rem-calc(40) !default;
+$h2-font-size: rem-calc(24) !default;
+$h2-font-size-large: rem-calc(28) !default;
+$h2-font-size-xlarge: rem-calc(34) !default;
+$h3-font-size: rem-calc(20) !default;
+$h3-font-size-large: rem-calc(24) !default;
+$h4-font-size: rem-calc(16) !default;
+$h4-font-size-large: rem-calc(18) !default;
+$h5-font-size: rem-calc(18) !default;
+$h5-font-size-large: rem-calc(20) !default;
+$h6-font-size: 1rem !default;
+$p-size-large: rem-calc(18);
+$p-size-xlarge: rem-calc(20);
+$large-line-height: 145%;
+
+/* Helpers */
+
+$helper-standard: 20px;
+$helper-thick: $helper-standard*2;
+$helper-thicker: $helper-standard*3;
+$helper-medium: $helper-standard*1.5;
+$helper-thin: $helper-standard/2;
+
+
+
+
+
+

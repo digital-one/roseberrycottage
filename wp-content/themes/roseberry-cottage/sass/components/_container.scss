@@ -1,0 +1,16 @@
+#wrapper{
+	display: block;
+	width:100%;
+	position: relative;
+	z-index: 999;
+}
+#main{
+	background-color:white;
+	padding:20px 0 50px;
+	.home &{
+		padding-bottom:0;
+	}
+	.page-template-template-thanks &{
+		min-height: 200px;
+	}
+}

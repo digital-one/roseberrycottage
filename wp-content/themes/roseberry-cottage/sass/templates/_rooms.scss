@@ -1,0 +1,113 @@
+#rates{
+	h4{
+		@include font-header;
+	}
+	.tinted-block{
+		text-align: center;
+		@include grid-column(
+				$columns:12
+				//$collapse:true
+			);
+		margin-bottom: 10px;
+		@media #{$large-up} { 
+			@include grid-column(
+				$columns:6,
+				$collapse:true
+			);
+			margin-bottom: 0;
+		}
+		.inner{
+			background-color: $light-grey;
+			padding: $helper-thin;
+		}
+		&:nth-child(1n){
+			border-right: 2px solid white;
+		}
+		&:nth-child(2n){
+			border-left: 2px solid white;
+		}
+	}
+	.price{
+		font-size: $h3-font-size;
+		font-family: $verlag-bold;
+		color: $dark-grey;
+		display: block;
+		@media #{$xlarge-up} { 
+			font-size: $h3-font-size-large;
+		}
+	}
+}
+#gform_fields_2{
+	@include grid-row();
+	.gfield_label{
+		display: none;
+	}
+	li{
+		@include grid-column(12);
+		@media #{$large-up} { 
+			@include grid-column(6);
+		}
+		text-align: left;
+		margin-bottom: 20px;
+		position: relative;
+		&.textarea{
+			@include grid-column(12);
+		}
+		&#field_2_8, &#field_2_9{
+			.gfield_label{
+				display: block;
+				background-color: $dark-grey;
+				color: white;
+				z-index: 999;
+				height: 40px;
+				line-height: 40px;
+				width: 20%;
+				text-align: center;
+				@include font-size(16px);
+				@include abs-pos(0,auto,auto,0.9375rem);
+
+			}
+			.ginput_container{
+				&:after{
+					content: "\e953";
+					font-family: 'icomoon';
+					@include abs-pos(0,0,auto,auto);
+					height: 40px;
+					width: 40px;
+					line-height: 40px;
+					text-align: center;
+					@include font-size(20px);
+					color: $dark-grey;
+				}
+			}
+			input{
+				padding-left: 25%;
+			}
+		}
+	}
+}
+.key{
+	padding: 30px 0 0;
+	span{
+		display: inline-block;
+		height:30px;
+		padding: 0 0 0 35px;
+		margin: 0 15px;
+		line-height: 30px;
+		text-align: left;
+		position:relative;
+		&:before{
+			content:"";
+			width:30px;
+			height:30px;
+			display: block;
+			border:1px solid darken($light-grey,20%);
+			@include abs-pos(0,auto,auto,0);
+		}
+		&.unavail{
+			&:before{
+				background-color: $light-blue;
+			}
+		}
+	}
+}
