@@ -23,21 +23,39 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-	<div class="off-canvas-wrap" data-offcanvas>
-  <div class="inner-wrap">
-  	<a class="right-off-canvas-toggle" href="#">Menu</a>
-
-    <!-- Off Canvas Menu -->
-    <aside class="right-off-canvas-menu">
-        <!-- whatever you want goes here -->
-        <ul>
-          <li><a href="#">Item 1</a></li>
-        </ul>
-    </aside>
-<div class="main-section">
+  <div class="slider"></div>
+<div class="wrapper">
+<div id="top-band"> <a class="right-off-canvas-toggle" href="#">Menu</a></div>
+<aside id="off-canvas">
+  <div class="scroll">
+<nav>
+<?php wp_nav_menu( array(
+    'theme_location' => 'main-menu',
+    'menu_id'=> 'main-menu',
+    'container' => '',
+    'container_class' => ''//,
+    //'walker' => new navWalker()
+    ));
+     ?>
+</nav>
+<address>
+<p>
+  Roseberry Cottage B&amp;B<br />
+Bishop Thornton<br />
+Harrogate<br />
+North Yorkshire<br />
+HG3 3JP
+</p>
+<p>
+<a href="tel:">+44 (0) 1225 403020</a><br />
+<a href="mailto:info@roseberrycottage.co.uk">info@roseberrycottage.co.uk</a></p>
+</address>
+</div>
+</aside>
 	<?php /* <div id="wrapper"> */ ?>
 <?php if(is_front_page()): ?>
 <?php /* <div id="top-band">Menu</div> */ ?>
+
 <header id="header">
 
 <div class="row main-container">
@@ -49,7 +67,8 @@
 </header>
 <?php else: ?>
 <header id="header">
-<a href="<?php echo home_url() ?>" id="home-link"><img src="<?php echo get_template_directory_uri(); ?>/images/roseberry-cottage-wo.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/images/roseberry-cottage-wo.png'" alt="Roseberry Cottage Boutique Bed &amp; Breakfast" /></a>
+   
+<a href="<?php echo home_url() ?>" id="home-link"><img src="<?php echo get_template_directory_uri(); ?>/images/roseberry-cottage.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/images/roseberry-cottage.png'" alt="Roseberry Cottage Boutique Bed &amp; Breakfast" /></a>
 </header>
 <?php endif ?>
 <!-- /header -->

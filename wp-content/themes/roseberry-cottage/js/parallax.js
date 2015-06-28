@@ -113,7 +113,7 @@
       return this;
     }
 
-    this.$mirror = $('<div />').prependTo('.inner-wrap');
+    this.$mirror = $('<div />').prependTo('.slider');
     this.$slider = $('<img />').prependTo(this.$mirror);
 
     this.$mirror.addClass('parallax-mirror').css({
@@ -261,8 +261,9 @@
     setup: function() {
       if (this.isReady) return;
 
-      var $doc = $(document), $win = $(window);
-
+   //   var $doc = $(document), $win = $(window);
+    var $doc = $(document), $win = $(window);
+    var $container = $('.main-content');
       $win.on('scroll.px.parallax load.px.parallax', function() {
           var scrollTopMax  = Parallax.docHeight - Parallax.winHeight;
           var scrollLeftMax = Parallax.docWidth  - Parallax.winWidth;
@@ -333,6 +334,7 @@
         Parallax[option]();
       }
     })
+    console.log('init');
   };
 
   var old = $.fn.parallax;

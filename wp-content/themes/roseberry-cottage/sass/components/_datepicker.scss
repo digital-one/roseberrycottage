@@ -23,6 +23,9 @@
 		@include opacity(.5);
 	}
 }
+.ui-state-default{
+		background-image: none !important;
+		}
 .ui-widget-content{
 	background-color: white;
 	border:1px solid lighten($grey,40%);
@@ -31,8 +34,10 @@
 	}
 	.booked span{
 		background-color: $light-blue;
+		background-image:none !important;
 	}
 }
+
 .ui-datepicker-prev,.ui-datepicker-next{
 	width:40px !important;
 	height:40px !important;
@@ -46,7 +51,8 @@
 	left:15px !important;
 	top:0 !important;
 	&:hover,&:active{
-		background-color: transparent;
+		background-color: transparent !important;
+		background-image: none !important;
 		border: none;
 		padding:0;
 		top:0;
@@ -115,6 +121,10 @@
 	padding:0;
 	height:40px;
 	line-height: 40px;
+	.ui-icon{
+		background-image: none !important;
+	}
+
 }
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
 	background-color: white;

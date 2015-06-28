@@ -19,11 +19,9 @@
 </div>
 </footer>
 <!--/footer-->
+
 </div>
 
-<a class="exit-off-canvas"></a>
-</div>
-</div>
 <?php /*
 <!-- callback form -->
 <div class="popup">

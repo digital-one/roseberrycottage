@@ -28,7 +28,6 @@
 	display:block;
 	background-color: white;
 	color: $grey;
-	padding: 0 $helper-standard;
 	@media #{$xxlarge-up} { 
 		padding: 0 $helper-thick;
 	}
@@ -37,6 +36,9 @@
 		&:before,&:after{
 			background-color: $dark-grey;
 		}
+	}
+	p{
+		color: $grey;
 	}
 	span.more{
 		color: $blue-grey;
@@ -50,6 +52,106 @@
 		.top,.bottom{
 			&:before,&:after{
 				background-color: white;
+			}
+		}
+	}
+}
+
+
+a.grid-button{
+	display: block;
+	&:link,&:visited{
+		color: $dark-grey;
+	}
+	.box{
+		display:block;
+		background-color: white;
+		color: $grey;
+		padding:0;
+		.more{
+			color: $blue-grey;
+		}
+		.inner-wrapper{
+			padding: 0 20px;
+			@media #{$xlarge-up} { 
+				padding: 0 40px;
+			}
+		}
+		@include transition(all .3s ease);
+		&:before{
+			padding-top:100%;
+			@media #{$small-only} { 
+				padding-top:50%;
+			}
+			content:"";
+			display: block;
+		}
+		&.text{
+			&:after{
+				@include transition(border-color .3s ease);
+				content:"";
+				@include pointer-top;
+				@media #{$medium-up} { 
+					@include pointer-left;
+				}
+			}
+		}
+	}
+	&.link-2{
+		.box.text:after{
+			@include pointer-top;
+			@media #{$medium-up} { 
+				@include pointer-right;
+			}
+		}
+	}
+	&.link-3{
+		.box.text:after{
+			@include pointer-top;
+			@media #{$medium-up} { 
+				@include pointer-left;
+			}
+			@media #{$xlarge-up} { 
+				@include pointer-top;
+			}
+		}
+	}
+	&:hover,&:active{
+		.box{
+			background-color: $blue-grey;
+			color: white;	
+			p,h1,h2,h3,h4,.more{
+				color: white;
+				/* &:before,&:after{
+					background-color: white;
+				} */
+			}
+			&.text{
+				&:after{
+					@include pointer-top-hover;
+					@media #{$medium-up} { 
+						@include pointer-left-hover;
+					}
+				}
+			}
+		}
+		&.link-2{
+			.box.text:after{
+				@include pointer-top-hover;
+				@media #{$medium-up} { 
+					@include pointer-right-hover;
+				}
+			}
+		}
+		&.link-3{
+			.box.text:after{
+				@include pointer-top-hover;
+				@media #{$medium-up} { 
+					@include pointer-left-hover;
+				}
+				@media #{$xlarge-up} { 
+					@include pointer-top-hover;
+				}
 			}
 		}
 	}

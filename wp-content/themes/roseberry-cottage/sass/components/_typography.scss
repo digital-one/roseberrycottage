@@ -83,8 +83,11 @@ h1,h2,h3,h4,h5{
 	}
 }
 h1{
-    font-size: $h1-font-size;
-    @media #{$xlarge-up} { 
+    font-size: $h1-font-size-small;
+     @media #{$large-up} { 
+        font-size: $h1-font-size;
+    }
+    @media #{$xxlarge-up} { 
         font-size: $h1-font-size-large;
     }
 }
@@ -93,11 +96,16 @@ h2{
 	font-size: $h2-font-size;
 	text-transform: none;
     letter-spacing:normal;
+    line-height: 140%;
+    margin-bottom: $helper-medium;
     @media #{$xlarge-up} { 
         font-size: $h2-font-size-large;
     }
     @media #{$xxlarge-up} { 
          font-size: $h2-font-size-xlarge;
+    }
+    .intro &{
+        margin-bottom: 0;
     }
 }
 h3,h4{
@@ -116,9 +124,9 @@ h4{
     }
 }
 h5{
-	@include font-size(18px);
+	@include font-size(16px);
 	text-transform: none;
-	letter-spacing: 1px;
+	letter-spacing: 0.5px;
 }
 p,ul,ol{
 	margin-bottom:20px;
@@ -126,13 +134,13 @@ p,ul,ol{
 		margin-bottom: 0;
 	}
 }
-p,h5{
+p,h5,ul{
     @media #{$xlarge-up} { 
-         font-size: $p-size-large;
-          line-height: $large-line-height;
+         //font-size: $p-size-large;
+         // line-height: $large-line-height;
     }
     @media #{$xxlarge-up} { 
-        font-size: $p-size-xlarge;
+       // font-size: $p-size-xlarge;
        
     } 
 }
@@ -148,6 +156,55 @@ a{
 small{
     @include font-size(14px);
     font-family: $verlag-book;
+    display: block;
+    line-height: 130%;
+}
+blockquote{
+    border:none;
+    padding:$helper-standard;
+    @media #{$medium-up} { 
+        padding:$helper-standard $helper-thick;
+    }
+    @media #{$xlarge-only}{
+         padding:$helper-standard $helper-thicker;
+    }
+    margin:0;
+    position: relative;
+    p{
+        font-family:$libre;
+        font-style:italic;
+        color: $dark-grey;
+        font-size: $h3-font-size;
+        @media #{$xlarge-up} { 
+             font-size: $h2-font-size;
+        }
+        padding: 0 40px;
+        position: relative;
+        &:before,&:after{
+            content:"";
+            width:31px;
+            height:25px;
+            display: block;
+            @include abs-pos(0,auto,auto,0);
+            background-image:url('../images/open-quotes.png');
+            .svg &{
+                background-image: url('../images/open-quotes.svg');
+            }
+            background-position:left top;
+            background-repeat: no-repeat;
+            background-size:100% auto;
+        }
+        &:after{
+            @include abs-pos(auto,0,0,auto);
+            background-image:url('../images/close-quotes.png');
+            .svg &{
+                background-image: url('../images/close-quotes.svg');
+            }
+        }
+    }
+    footer{
+        font-family: $verlag-book;
+    }
 }
 
 

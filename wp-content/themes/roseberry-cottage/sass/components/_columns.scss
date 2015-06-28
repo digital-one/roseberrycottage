@@ -146,4 +146,22 @@
 		$push:4
 		);
 	}
+	.xlarge-block-grid-3{
+		@include block-grid(3);
+	}
+	.xlarge-block-grid-3 > li {
+  		clear: none !important;
+	}
+
+
 }
+
+@media #{$xxlarge-up} { 
+
+.xxlarge-10{
+	  @include grid-column(
+	    $columns:10
+	  );
+	}
+
+	}

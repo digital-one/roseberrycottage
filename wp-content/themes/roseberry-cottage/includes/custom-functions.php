@@ -1,8 +1,27 @@
 <?php
 
-
+function admin_scripts_and_styles(){
+  global $post;
+  wp_deregister_script( 'jquery' );
+    wp_register_script( 'jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", false, null );
+    wp_enqueue_script( 'jquery' );
+   wp_register_script( 'jquery-ui', "http://code.jquery.com/ui/1.11.4/jquery-ui.js",array(),'1.11.4', false);
+    wp_enqueue_script( 'jquery-ui' );
+    wp_register_script( 'multidatespicker', get_template_directory_uri().'/js/multidatepicker/jquery-ui.multidatespicker.js', array(), null, false );
+ wp_enqueue_script( 'multidatespicker' );  
+  wp_register_script( 'admin-scripts', get_template_directory_uri().'/js/admin-scripts.js', array(), null, false );
+ wp_enqueue_script( 'admin-scripts' ); 
+  wp_register_style( 'jquery-ui-css', get_stylesheet_directory_uri() . '/css/jquery-ui.css', array(), '', 'all' );
+    wp_enqueue_style( 'jquery-ui-css' );
+   //  wp_register_style( 'cangas', get_stylesheet_directory_uri() . '/css/cangas.datepicker.css', array(), '', 'all' );
+  //  wp_enqueue_style( 'cangas' );
+  $booked_dates =  get_post_meta($post->ID, 'booked_dates', true);
+      wp_localize_script('admin-scripts','_booked_dates',$booked_dates);
+   
+} 
 
 function scripts_and_styles() {
+  global $post;
    //only effect front-end of your website
 	if (!is_admin() && $_SERVER['SCRIPT_NAME'] != '/wp-login.php') {
 	
@@ -32,31 +51,37 @@ function scripts_and_styles() {
 		//slick slider
 	  	wp_register_script(  'slick', get_stylesheet_directory_uri() . '/js/slick/slick.min.js', array(), '1.4.1', false  );
 	  	wp_enqueue_script( 'slick' );
+        wp_register_style( 'slick-css', get_stylesheet_directory_uri() . '/js/slick/slick.css', array(), '', 'all' );
+    wp_enqueue_style( 'slick-css' );
+		
 
-		// modernizr 
-		wp_register_script( 'modernizr', get_template_directory_uri().'/bower_components/foundation/js/vendor/modernizr.js', array(), null, false );
-		wp_enqueue_script( 'modernizr' );
-
-      // modernizr 
-    wp_register_script( 'fastclick', get_template_directory_uri().'/bower_components/foundation/js/vendor/fastclick.js', array(), null, false );
-    wp_enqueue_script( 'fastclick' );
-
+    //foundation js
   wp_register_script( 'foundation', get_template_directory_uri().'/bower_components/foundation/js/foundation.min.js', array(), null, false );
 wp_enqueue_script( 'foundation' );  
   wp_register_script( 'foundation-offcanvas', get_template_directory_uri().'/bower_components/foundation/js/foundation/foundation.offcanvas.js',array(), null,false);
 wp_enqueue_script( 'foundation-offcanvas' );  
+  wp_register_script( 'modernizr', get_template_directory_uri().'/bower_components/foundation/js/vendor/modernizr.js', array(), null, false );
+    wp_enqueue_script( 'modernizr' );
+  wp_register_script( 'fastclick', get_template_directory_uri().'/bower_components/foundation/js/vendor/fastclick.js', array(), null, false );
+    wp_enqueue_script( 'fastclick' );
 
 		//twitter fetcher
-		wp_register_script( 'twitter_fetcher', get_stylesheet_directory_uri() . '/js/twitter-fetcher.js', array(), null, false );
-  		wp_enqueue_script( 'twitter_fetcher' );
+		//wp_register_script( 'twitter_fetcher', get_stylesheet_directory_uri() . '/js/twitter-fetcher.js', array(), null, false );
+  		//wp_enqueue_script( 'twitter_fetcher' );
 
-      wp_register_script( 'parallaxjs', get_stylesheet_directory_uri() . '/js/parallax.js', array(), null, false );
+
+        wp_register_script( 'parallaxjs', get_stylesheet_directory_uri() . '/js/parallax.js', array(), null, false );
       wp_enqueue_script( 'parallaxjs' );
+
+
+        wp_register_script( 'imgpreload', get_stylesheet_directory_uri() . '/js/jquery.imgpreload.min.js', array(), null, false );
+      wp_enqueue_script( 'imgpreload' );
+
+
 
   		//easing
   		wp_register_script( 'easing', get_stylesheet_directory_uri() . '/js/jquery.easing.min.js', array(), null, false );
   		wp_enqueue_script( 'easing' );
-
 
 
   		//scroll to
@@ -81,11 +106,11 @@ wp_enqueue_script( 'foundation-offcanvas' );
     
 
 		 //google maps api
-	//  wp_register_script( 'google_maps_api', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://maps.google.com/maps/api/js?sensor=true", false, null );
-	 // wp_enqueue_script( 'google_maps_api' );
+	  wp_register_script( 'google_maps_api', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://maps.google.com/maps/api/js?sensor=true", false, null );
+	  wp_enqueue_script( 'google_maps_api' );
 
-	 // wp_register_script(  'gmap', get_stylesheet_directory_uri() . '/js/jquery.gmap.js', array(), null, false  );
-	 // wp_enqueue_script( 'gmap' );
+	  wp_register_script(  'gmap', get_stylesheet_directory_uri() . '/js/jquery.gmap.js', array(), null, false  );
+	 wp_enqueue_script( 'gmap' );
 
 	 wp_register_script( 'scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array(), null, false  );
 		wp_enqueue_script( 'scripts' );	
@@ -106,11 +131,43 @@ wp_enqueue_script( 'foundation-offcanvas' );
 		//wp_localize_script( 'allscripts', 'Map', array('lat' => 51.5196628,'lng' =>-0.0875072,'marker'=> get_template_directory_uri().'/images/marker.png'));
     wp_localize_script('scripts','home_url',get_template_directory_uri());
 		wp_localize_script( 'scripts', 'MyAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+
+    $booked_dates =  get_post_meta($post->ID, 'booked_dates', true);
+      wp_localize_script('scripts','_booked_dates',$booked_dates);
+   
+
+    //get map locations
+      $args = array(
+        'post_type'=>'cpt-location',
+        'post_status' => 'publish',
+        'numberposts' => -1,
+        'orderby' => 'menu_order',
+        'order' => 'ASC'
+        );
+      if($locations = get_posts($args)):
+        $geocodes = array();
+      foreach($locations as $location):
+      //  markers: [{'latitude': 0,'longitude': 0,'name': 'London','content': 'Argentum<br />2 Queen Caroline Street<br />Hammersmith<br />London<br />W6 9DX'}],
+        $loc = get_field('location',$location->ID);
+        $lng = $loc['lng'];
+        $lat = $loc['lat'];
+        $name = $location->post_title;
+        $geocodes[] = array('lat'=>$lat,'lng'=>$lng,'name'=>$name);
+        endforeach;
+        $marker = get_template_directory_uri().'/images/marker.png';
+        $roseberry_marker = get_template_directory_uri().'/images/roseberry-marker.png';
+        wp_localize_script( 'scripts', 'Map', array('geocodes'=>$geocodes,'marker'=>$marker, 'roseberry_marker'=>$roseberry_marker));
+        endif;
 	}
 }
 
 // enqueue base scripts and styles
 add_action('wp_enqueue_scripts', 'scripts_and_styles', 999);
+add_action('admin_enqueue_scripts', 'admin_scripts_and_styles');
+add_action('admin_init', 'admin_init');
+ // save custom metafields
+            add_action( 'save_post', 'save_custom_data' );
+            add_action( 'post_updated', 'save_custom_data');
 
 // enqueue google fonts
 function google_fonts() {
@@ -130,6 +187,47 @@ add_action('wp_print_styles', 'font_awesome');
 //Hide Admin Bar
 show_admin_bar( false );
 
+add_action( 'init', 'add_excerpts_to_pages' );
+function add_excerpts_to_pages() {
+     add_post_type_support( 'page', 'excerpt' );
+}
+
+function admin_init(){
+// allow to customise menus
+global $post;
+$post_id=0;
+if(!empty($_GET['post'])) $post_id = $_GET['post'];
+ // $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+  if ($post_id == 7 or $post_id == 10):
+  add_meta_box('room_menu', 'Availability', 'set_room_menus', 'page', 'normal', 'low');
+//add_meta_box('availability_menu', 'Availability', 'my_meta_setup_1', 'page', 'normal', 'high');
+endif;
+}
+
+function save_custom_data($post_id){
+  global $post;
+  if(!empty($_POST['booked_dates'])):
+if (wp_verify_nonce($_POST['room_meta_noncename'],__FILE__)): 
+                    if(isset($_POST['booked_dates']) ):
+
+                        $data = esc_html( trim($_POST['booked_dates']));
+                       // die('post_id='.$post_id);
+                        update_post_meta($post_id, 'booked_dates', $data);
+                    endif;
+                  endif;
+                  endif;
+}
+
+function set_room_menus() {
+  global $post;
+
+  $booked_dates = get_post_meta( $post->ID, 'booked_dates', true );
+   echo '<div id="menu_wrapper"><div id="menu_admin">';
+   echo '<div id="availability"></div>';
+   echo '<input type="hidden" name="booked_dates" id="booked_dates" value="22222'.$booked_dates.'" />';
+   echo '<input type="hidden" name="room_meta_noncename" value="' . wp_create_nonce(__FILE__) . '" />';
+  echo '</div></div>';
+}
 
 //add svg support to media uploader
 function cc_mime_types( $mimes ){

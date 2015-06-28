@@ -4,17 +4,23 @@
 	}
 	.tinted-block{
 		text-align: center;
-		@include grid-column(
+		margin-bottom: 10px;
+		/* @include grid-column(
 				$columns:12
 				//$collapse:true
 			);
+*/
+
 		margin-bottom: 10px;
 		@media #{$large-up} { 
+			/*
 			@include grid-column(
 				$columns:6,
-				$collapse:true
+				$collapse:true,
+				$center: true
 			);
-			margin-bottom: 0;
+	*/
+			
 		}
 		.inner{
 			background-color: $light-grey;
@@ -28,12 +34,13 @@
 		}
 	}
 	.price{
-		font-size: $h3-font-size;
+		font-size: $h2-font-size;
 		font-family: $verlag-bold;
 		color: $dark-grey;
 		display: block;
+		margin-bottom: 10px;
 		@media #{$xlarge-up} { 
-			font-size: $h3-font-size-large;
+			font-size: $h2-font-size-large;
 		}
 	}
 }

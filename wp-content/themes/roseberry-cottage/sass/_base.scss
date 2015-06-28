@@ -4,11 +4,12 @@ html{
 body{
 	width:100%;
 	overflow-x:hidden;
-	font-family: $verlag-light;
+	font-family: $verlag-book;
 	font-weight:normal;
 	color: $grey;
 	background-color:$light-grey;
-	@include font-size(16px);
+	line-height: $base-line-height;
+	font-size: $base-font-size;
 	/*
 	font-size: $base-font-size-small;
 	line-height:$base-line-height-small;

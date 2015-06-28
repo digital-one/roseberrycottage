@@ -1,0 +1,76 @@
+#proprietors{
+	@extend .clearfix;
+	.tinted-box{
+		@include grid-column(
+			$columns:12
+			);
+		@media #{$small-up} { 
+			@include grid-column(
+				$columns:9,
+				$center: true
+			);
+		}
+		@media #{$large-up} { 
+			@include grid-column(
+				$columns:12
+			);
+		}
+		@media #{$xlarge-up} { 
+			@include grid-column(
+				$columns:12,
+				$center: true
+			);
+		}
+		.tinted-box-inner{
+			@include grid-row($behavior:nest);
+		}
+	}
+	figure,main{
+		float:left;
+	}
+	figure{
+		@include grid-column(
+			$columns:12,
+			$collapse:true
+		);
+		@media #{$large-up} { 
+			@include grid-column(
+				$columns:5,
+				$collapse:true
+			);
+		}
+		@media #{$xlarge-up} { 
+			@include grid-column(
+				$columns:4,
+				$collapse:true
+			);
+		}
+		img{
+			width:100%;
+			display: block;
+		}
+	}
+	main{
+		
+		text-align: left;
+		@include grid-column(
+			$columns:12,
+			$collapse:true
+		);
+		padding: $helper-standard;
+		@media #{$large-up} { 
+			@include grid-column(
+				$columns:7,
+				$collapse:true
+			);
+			padding: $helper-standard;
+		}
+		@media #{$xlarge-up} { 
+			@include grid-column(
+				$columns:8,
+				$collapse:true
+			);
+			padding: $helper-standard;
+		}
+	}
+}

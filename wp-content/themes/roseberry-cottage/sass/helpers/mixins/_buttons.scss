@@ -52,3 +52,54 @@
   line-height: 38px;
   font-size: $h4-font-size;
 }
+@mixin pointer-left{
+  width: 0; 
+  height: 0; 
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent; 
+  border-right:30px solid white; 
+  border-left:none;
+  @include abs-pos(50%,auto,auto,0);
+  margin-top:-28px;
+}
+@mixin pointer-left-hover{
+  @include pointer-left;
+  border-right: 30px solid $blue-grey;
+}
+@mixin pointer-right{
+  width: 0; 
+  height: 0; 
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent; 
+  border-left:30px solid white; 
+  border-right:none;
+  @include abs-pos(50%,-30px,auto,auto);
+  margin-top:-28px;
+  z-index: 999;
+}
+@mixin pointer-right-hover{
+  @include pointer-right;
+  border-left: 30px solid $blue-grey;
+}
+@mixin pointer-top{
+  width: 0; 
+  height: 0; 
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent; 
+  border-bottom:30px solid white; 
+  @include abs-pos(-30px,auto,auto,50%);
+  margin-left:-28px;
+}
+@mixin pointer-top-hover{
+  @include pointer-top;
+  border-bottom: 30px solid $blue-grey;
+}
+@mixin pointer-bottom{
+  width: 0; 
+  height: 0; 
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent; 
+  border-top:30px solid white; 
+  @include abs-pos(auto,auto,-30px,50%);
+  margin-left:-28px;
+}

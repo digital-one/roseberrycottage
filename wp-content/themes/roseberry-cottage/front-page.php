@@ -28,15 +28,15 @@
 </div>
 	</div>
 </section>
-<section class="bg-image-break centered-text parallax" data-parallax="scroll" data-image-src="<?php echo get_template_directory_uri(); ?>/images/house-exterior.jpg">
-	<div class="outer-wrapper">
-	<div class="inner-wrapper">
+<section class="bg-image-break centered-text">
+	<span class="slide outer-wrapper" data-image="<?php echo get_template_directory_uri(); ?>/images/house-exterior.jpg">
+	<span class="inner-wrapper">
 <div class="caption">
 <h3><em>unwind</em>IN ENCHANTING SURROUNDINGS</h3>
 <a href="">discover</a>
 </div>
-</div>
-</div>
+</span>
+</span>
 </section>
 <section class="offset-section with-footer centered-text">
 	<div class="row main-container">
@@ -111,13 +111,13 @@
 	</div>
 </section>
 <section class="bg-image-break centered-text" data-parallax="scroll"  data-image-src="<?php echo get_template_directory_uri(); ?>/images/meadow.jpg" >
-	<div class="outer-wrapper">
-	<div class="inner-wrapper">
+	<span class="slide outer-wrapper" data-image="<?php echo get_template_directory_uri(); ?>/images/meadow.jpg">
+	<span class="inner-wrapper">
 <div class="caption">
 <h3><em>the perfect setting</em>AMONGST WILD FLOWERS &amp; LONG GRASS</h3>
 </div>
-</div>
-</div>
+</span>
+</span>
 </section>
 <section id="mailing-list-form">
 	<div class="row main-container">

@@ -19,7 +19,34 @@
 }
 .main-section{
 	position: relative;
+	// /padding-top:108px;
 }
+.section{
+	padding: 0 0 $helper-thick;
+	&.mid{
+		padding-top: $helper-thick;
+	}
+	&.first{
+		padding-top: $helper-standard;
+		padding-bottom: $helper-thick;
+	}
+	&.last{
+		padding-bottom: $helper-standard;
+	}
+	&.divide{
+		border-bottom: 1px solid $light-grey;
+		margin-bottom: $helper-thick;
+	}
+}
+.wrapper{
+	position: relative;
+	display:block;
+	width:100%;
+	overflow-x:hidden;
+	padding: 40px 0 0;
+	//height: 100%;
+}
+
 
 
 

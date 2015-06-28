@@ -200,7 +200,7 @@ button{
 .validation_message{
 	display: block;
 	color: red;
-	@include font-size(12px);
+	@include font-size(14px);
 	font-weight:700;
 }
 .validation_error{

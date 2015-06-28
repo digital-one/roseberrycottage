@@ -4,7 +4,7 @@
 	text-align:center;
 	@include font-size(12px);
 	li{
-		padding: 0 5px;
+		padding: 0 10px;
 	}
 	a{
 		&:link,&:visited{
@@ -50,6 +50,10 @@ nav#footer-links{
 	margin-bottom: 10px;
 	z-index: 2;
 	position: relative;
+	ul{
+		@include font-size(14px);	
+	}
+
 }
 .logos-left,.logos-right{
 	text-align:left;
@@ -62,40 +66,6 @@ nav#footer-links{
 	text-align: right;
 	a{
 		margin: 0 0 0 10px;	
-	}
-}
-menu.social{
-	@include inline-menu;
-	margin:0 auto;
-	display: inline-block;
-	@media #{$medium-up} {
-		float: right;
-		margin:0;
-	}
-	a{
-		&:link,&:visited{
-			display: block;
-			@include transition(background-color .2s ease);
-			width:30px;
-			height:30px;
-			@include border-radius(50%);
-			background-color: rgba(255,255,255,.5);
-			line-height: 30px;
-			text-align: center;
-			color: $dark-blue-grey;
-			&:before{
-				width:30px;
-				height:30px;
-				display: block;
-				line-height: 30px;
-				text-align: center;
-				color: $dark-blue-grey;
-				@include font-size(20px);
-			}
-		}
-		&:hover,&:active{
-			background-color: rgba(255,255,255,1);
-		}
 	}
 }
 #tourist-links{

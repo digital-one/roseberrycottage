@@ -9,9 +9,9 @@
         position: relative;
         &:before{
             content:"";
-            padding-top:50%;
-            @media #{$medium-up} {
-                padding-top:100%;
+            padding-top:100%;
+            @media #{$small-only} {
+                padding-top:50%;
             }
             display: block;
         }
@@ -43,6 +43,10 @@
             @include bg-cover;
             height:100%;
             display: inline-block;
+            padding: 0 $helper-standard;
+            @media #{$xxlarge-up} {
+                padding: 0 $helper-thick;
+            }
             &:before{
                 vertical-align: middle;
                 display: inline-block;

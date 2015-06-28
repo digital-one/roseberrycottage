@@ -5,11 +5,13 @@
 
 require_once( 'includes/custom-functions.php' ); 
 get_template_part('includes/gravity-forms');
+get_template_part('includes/images');
+get_template_part('includes/post-types');
 /*
 get_template_part('includes/users');
 get_template_part('includes/gravity-forms');
 get_template_part('includes/menus');
-get_template_part('includes/post-types');
+
 get_template_part('includes/images');
 //get_template_part('includes/email');
 //Classes
