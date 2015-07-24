@@ -1,22 +1,21 @@
 <?php /* Template Name: About */ ?>
 <?php get_header() ?>
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-	<section class="bg-image-break centered-text"  data-parallax="scroll" data-image-src="<?php echo get_template_directory_uri(); ?>/images/house-exterior.jpg">
-		<div class="outer-wrapper">
-
-
-
-		</div>
+	<?php
+	list($src,$w,$h) = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'banner-image'); ?>
+	<section class="bg-image-break centered-text">
+		<span class="slide outer-wrapper" data-image="<?php echo $src ?>">
+</span>
 </section>
 <section class="offset-section centered-text">
 	<div class="row main-container">
-		<div class="small-12 medium-11 medium-centered xlarge-11 xxlarge-10 columns">
+		<div class="small-12 medium-11 medium-centered xlarge-10 columns">
 		<section class="first section">
-			<h1 class="underline-hd">ABOUT US</h1>
-<h2>Welcome to Roseberry Cottage, a new family-owned and run boutique bed &amp; breakfast in beautiful Yorkshire countryside close to Harrogate </h2>
 
-		<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-<p>ed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. </p>
+			<h1 class="underline-hd">ABOUT US</h1>
+<h2>Welcome to Roseberry Cottage, a family run boutique bed and breakfast in a quiet rural location just 15 minutes from Harrogate, Ripon and Pateley Bridge town centres.</h2>
+		
+		<p>Roseberry Cottage is a Georgian property surrounded by farmland on the edge of Nidderdale, in the Yorkshire Dales. We offer contemporary and luxurious rooms in quiet and peaceful surroundings.  Our rooms have been designed by us, with the local environment in mind, using colour and texture from the local area.  We have combined antique furniture, modern bathrooms, natural wool carpets and throws to offer you luxurious but relaxed surroundings. </p>
 </section>
 <section id="proprietors" class="section">
 
@@ -26,16 +25,23 @@
 <img src="<?php echo get_template_directory_uri(); ?>/images/proprietor-placeholder.jpg" />
 		</figure>
 		<main>
-<h5>Title</h5>
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+<h5>Sara and Rob welcome you to Roseberry Cottage</h5>
+<p>We are Sara and Rob. When we moved to Roseberry Cottage, looking for a business we could run from home, we decided to convert an unused barn in our grounds into luxurious guest accommodation.</p>
 </main>
 </div>
 </div>
+</section>
+<section class="section text-left">
+<p> Our vision was to create a luxurious, peaceful and private environment for our guests to come and enjoy all that this area of North Yorkshire has to offer. </p>
+ <p>We aim to bridge the gap between the sometimes impersonal environment of a high end hotel and the traditional B&amp;B.  To that ends, we offer you the luxury and comfort we have all come to expect when we stay in a good hotel, but with the smaller and more relaxed environment of a bed and breakfast, with attention to detail and personal service.</p>
 </section>
 <section id="quote" class="section divide">
 	<blockquote><p>Our rooms have been designed with a meticulous attention to design and detail in order to create a warm and welcoming atmosphere. Roseberry Cottage Bed and Breakfast feels like home.</p><footer>Sara Jaffar, Proprietor</footer></blockquote>
 
 </section>
+
+
+
 
 </div>
 	<section id="social" class="section last">

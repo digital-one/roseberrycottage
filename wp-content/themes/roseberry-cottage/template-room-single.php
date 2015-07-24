@@ -3,91 +3,31 @@
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<?php
 	list($src,$w,$h) = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'banner-image'); ?>
-	<section class="bg-image-break centered-text">
-		<span class="slide outer-wrapper" data-image="<?php echo $src ?>">
-
-
-
-		</span>
+	<section class="bg-image-break centered-text slideshow">
+		<?php
+		if(get_field('slides_rptr')):
+			while(the_repeater_field('slides_rptr')): 
+				list($src,$w,$h) = wp_get_attachment_image_src(get_sub_field('slide_image'),'banner-image');
+			?>
+		<span class="slide outer-wrapper" data-image="<?php echo $src ?>"></span>
+	<?php endwhile; ?>
+<?php endif ?>
 </section>
 <section class="offset-section centered-text">
 	<div class="row main-container">
-		<div class="small-12 medium-10 medium-centered large-8 columns">
+		<div class="small-12 medium-10 medium-centered xlarge-9 columns">
 			<div class="section first">
 				<?php $title = explode(' ',get_the_title()); ?>
 			<h1 class="mid-line-hd"><span class="wrap"><span class="top"><?php echo $title[0] ?></span><span class="bottom"><?php echo $title[1] ?></span></span></h1>
 <?php the_content() ?>
 </div>
-
-
 </div>
-	<div class="grid row collapse">
-		<?php
-			list($feature_img_1,$w,$h) = wp_get_attachment_image_src(get_field('feature_image_1'),'double-square-image');
-			list($feature_img_2,$w,$h) = wp_get_attachment_image_src(get_field('feature_image_2_1'),'square-image');	
-			list($feature_img_3,$w,$h) = wp_get_attachment_image_src(get_field('feature_image_2_2'),'square-image');	
-			?>
-					<!--block-->
-			<div class="xsmall-12 medium-6 xlarge-8 columns"><div class="double box"><div class="inner-wrapper" style="background-image:url('<?php echo $feature_img_1 ?>');"></div></div></div>
-			<!--/block-->
-				<!--block-->
-			<div class="xsmall-12 medium-6 xlarge-4 columns">
-				<div class="box text">
-					<?php /*
-					<a href="" class="inner-wrapper box-button">
-						<div class="v-center">
-							<h3><span class="wrap"><?php echo get_field('feature_title_1') ?></h3><p><?php echo get_field('feature_text_1') ?></p><footer><span class="more">VIEW GALLERY</span></footer>
-						</div></a>
-						*/ ?>
-						<div class="inner-wrapper">
-						<div class="v-center">
-							<h3><span class="wrap"><?php echo get_field('feature_title_1') ?></h3><p><?php echo get_field('feature_text_1') ?></p>
-						</div></div>
-
-					</div></div>
-					<!--/block-->
-		
-					<!-- block -->
-					<div class="xsmall-12 medium-6 xlarge-4 show-for-xlarge-up hide-for-xsmall-only columns">
-				<div class="box">
-					<div class="inner-wrapper block-link" style="background-image:url('<?php echo $feature_img_2 ?>');">
-						</div>
-					</div></div>
-					<!--/block-->
-					
-					<!-- block -->
-					<div class="small-12 medium-6 medium-push-6 xlarge-4 xlarge-push-4 columns">
-				<div class="box">
-					<div class="inner-wrapper"  style="background-image:url('<?php echo $feature_img_3 ?>');">
-						</div>
-					</div></div>
-					<!-- /block -->
-					<!-- block -->
-					<div class="xsmall-12 medium-6 medium-pull-6 xlarge-4 xlarge-pull-4 columns">
-				<div class="box text">
-					<?php /*
-					<a href="" class="inner-wrapper box-button">
-						<div class="v-center">
-							<h3><?php echo get_field('feature_title_2')?></h3><p><?php echo get_field('feature_text_2')?>
-</p><footer><span class="more">MORE</span></footer>
-						</div></a> */ ?>
-
-						<div class="inner-wrapper">
-						<div class="v-center">
-							<h3><?php echo get_field('feature_title_2')?></h3><p><?php echo get_field('feature_text_2')?>
-</p>
-						</div></div>
-
-
-					</div></div>
-					<!-- /block -->
-					
-			</div>
-			<footer class="section-footer"><h2>Book with us during May or June and enjoy 10% discount off your stay</h2><a href="" class="button-outline-white">Check Availability</a></footer>
+	<?php get_template_part('partials/content','featured-links' ); ?>
+			<footer class="section-footer"><h2><?php echo get_field('ob_heading') ?></h2><a href="<?php echo get_field('ob_button_link') ?>" title="<?php echo get_field('ob_button_label') ?>" class="button-outline-white"><?php echo get_field('ob_button_label') ?></a></footer>
 <div class="row collapse">
 	<div class="small-10 small-centered columns">
 <section id="rates" class="section mid divide">
-<h3>Rates</h3>
+<h3>Tariffs</h3>
 <div class="row">
 <?php
 if(get_field('rate')):
@@ -108,6 +48,7 @@ while(the_repeater_field('rate')):
 	</section>
 	<section id="booking-request" class="section">
 	<h3>Booking Request</h3>
+	<p>You can request a booking by completing the form below. We can call you back to confirm your booking requirements and take a valid debit or credit card.  Upon booking we will take a £30 deposit.<br />Alternatively please call us directly on <a href="tel:+44 (0)1423 772926">+44 (0)1423 772926</a> to make your reservation.</p>
 	<?php
 //(id, display title, display desc, display inactive, field values, ajax, tab index)
 gravity_form(2, false, false, false, '', true, 1);

@@ -188,7 +188,7 @@ var _markers = [];
 		if(options.zoomMapOnMarkerClick){
 		// Zoom to 9 when clicking on marker
 		google.maps.event.addListener(marker,'click',function() {
-		map.setZoom(6);
+		map.setZoom(14);
 		map.setCenter(this.getPosition());
 		  infowindow.setContent(this.html);
 		infowindow.open(map,this);
@@ -223,7 +223,13 @@ var _markers = [];
 		$(this).on('click',function(e){
 			e.preventDefault();
 			google.maps.event.trigger(_markers[index+1], 'click');
-		})
+			var _animationSpeed = 500,
+    		_target = '0';
+  			 $.scrollTo( _target, _animationSpeed, {
+	          	easing: 'easeInOutExpo',
+	          offset: 0
+	        	});
+			})
 	});
 
 //function to control size of marker when zoomed

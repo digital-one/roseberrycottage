@@ -13,8 +13,7 @@ map here
 		<div class="small-12 large-10 medium-centered xlarge-9 columns">
 			<header class="section first intro">
 			<h1 class="underline-hd">LOCAL AREA</h1>
-<h2>Roseberry Cottage is conveniently situated between the Spa town of Harrogate and the market town of Ripon and just eight miles from the typical Dales market town of Pateley Bridge
-</h2>
+<?php the_content() ?>
 </header>
 </div>
 <div class="grid row collapse">
@@ -32,7 +31,7 @@ map here
       	$i=1;
       foreach($locations as $location):
       	?>
-<a href="" class="grid-button map link-<?php echo $i ?>">
+<div class="grid-button link-<?php echo $i ?>">
 	<!-- block -->
 <div class="small-12 medium-6<?php if($i==2):?> medium-push-6<?php endif ?> columns">
 				<div class="box">
@@ -46,10 +45,10 @@ map here
 				<div class="box text">
 					<div class="inner-wrapper">
 						<div class="v-center">
-							<h3><span class="wrap"><?php echo $location->post_title ?></h3><?php echo $location->post_content ?><footer><span class="more map">VIEW ON MAP</span></footer>
+							<h3><span class="wrap"><?php echo $location->post_title ?></h3><?php echo $location->post_content ?><footer><p><a href="#" class="more map">VIEW ON MAP</a></p><p><a href="<?php echo get_field('website',$location->ID) ?>" class="more" target="_blank">WEBSITE</a></p></footer>
 						</div></div>
 					</div></div>
-				</a>
+				</div>
 					<!-- /block -->
 <?php
 $i++;
@@ -93,7 +92,7 @@ endif;
       	$i=1;
       foreach($locations as $location):
       	?>
-	<a href="" class="grid-button map link-3">
+	<div class="grid-button link-3">
 		<!-- block -->
 <div class="small-12 medium-6 xlarge-12 columns">
 				<div class="box">
@@ -107,11 +106,11 @@ endif;
 				<div class="box text">
 					<div class="inner-wrapper">
 						<div class="v-center">
-							<h3><span class="wrap"><?php echo $location->post_title ?></h3><?php echo $location->post_content ?><footer><span class="more map">VIEW ON MAP</span></footer>
+							<h3><span class="wrap"><?php echo $location->post_title ?></h3><?php echo $location->post_content ?><footer><p><a href="#" class="more map">VIEW ON MAP</a></p><p><a href="<?php echo get_field('website',$location->ID) ?>" class="more" target="_blank">WEBSITE</a></p></footer>
 						</div></div>
 					</div></div>
 			<!-- /block -->
-	</a>
+	</div>
 	<?php
 	endforeach;
 	endif;
@@ -124,7 +123,7 @@ endif;
 
 
 	
-			<footer class="section-footer"><h2>Book with us during May or June and enjoy 10% discount off your stay</h2><a href="" class="button-outline-white">Check Availability</a></footer>
+			<footer class="section-footer"><h2><?php echo get_field('ob_heading') ?></h2><a href="<?php echo get_field('ob_button_link') ?>" title="<?php echo get_field('ob_button_label') ?>" class="button-outline-white"><?php echo get_field('ob_button_label') ?></a></footer>
 <div class="row">
 	<div class="small-10 small-centered columns">
 <section id="other-places" class="section divide mid">
@@ -150,7 +149,7 @@ endif;
 endif;
 ?>
 </ul>
-<footer><a href="" class="more arrow">VISIT LOCAL TOURIST INFORMATION</a></footer>
+<footer><a href="http://www.visitharrogate.co.uk" target="_blank" class="more arrow">VISIT LOCAL TOURIST INFORMATION</a></footer>
 </section>
 <section id="social" class="section last">
 	<h4>Follow us</h4>

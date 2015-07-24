@@ -1,5 +1,17 @@
 $(function(){
 
+
+ $('.scrollto').on('click',function(e){
+    e.preventDefault();
+    var _animationSpeed = 500,
+    _target = $(this).attr('href');
+   $.scrollTo( _target, _animationSpeed, {
+          easing: 'easeInOutExpo',
+          offset: 0
+        });
+  })
+
+
 var _slides,
     _slider = $('.slider'),
     _parallaxObj = $('.bg-image-break span.slide'),
@@ -25,7 +37,6 @@ $.imgpreload(_preloadImgs,function(){
 
 resortSlider = function(){
   _slides = $('.parallax-mirror',_slider);
-  console.log('resort');
    _zindex=100;
    _slides.each(function(){
     $(this).css({
@@ -250,6 +261,7 @@ if($('#map').length){
        $('#map').gmap({
            markers: _markers,
            markerFile: Map.marker,
+           zoomMapOnMarkerClick: true,
            //markerFileSmall: MarkerSmall,
           // markerSmallWidth:12,
            //markerSmallHeight:24,

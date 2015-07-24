@@ -111,7 +111,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
-  line-height: 140%;
+  line-height: 120%;
   margin: 0;
   padding: 0;
   position: relative;
@@ -1689,6 +1689,726 @@ select {
     position: relative;
     right: 91.66667%;
     left: auto;
+  }
+}
+@media only screen and (min-width: 62.0625rem) {
+  /* line 155, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-push-0 {
+    position: relative;
+    left: 0;
+    right: auto;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-pull-0 {
+    position: relative;
+    right: 0;
+    left: auto;
+  }
+
+  /* line 155, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto;
+  }
+
+  /* line 155, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto;
+  }
+
+  /* line 155, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-push-3 {
+    position: relative;
+    left: 25%;
+    right: auto;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto;
+  }
+
+  /* line 155, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto;
+  }
+
+  /* line 155, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto;
+  }
+
+  /* line 155, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-push-6 {
+    position: relative;
+    left: 50%;
+    right: auto;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto;
+  }
+
+  /* line 155, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto;
+  }
+
+  /* line 155, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto;
+  }
+
+  /* line 155, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-push-9 {
+    position: relative;
+    left: 75%;
+    right: auto;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto;
+  }
+
+  /* line 155, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto;
+  }
+
+  /* line 155, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto;
+  }
+
+  /* line 163, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .column,
+  .columns {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    float: left;
+  }
+
+  /* line 168, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-1 {
+    width: 8.33333%;
+  }
+
+  /* line 168, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-2 {
+    width: 16.66667%;
+  }
+
+  /* line 168, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-3 {
+    width: 25%;
+  }
+
+  /* line 168, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-4 {
+    width: 33.33333%;
+  }
+
+  /* line 168, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-5 {
+    width: 41.66667%;
+  }
+
+  /* line 168, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-6 {
+    width: 50%;
+  }
+
+  /* line 168, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-7 {
+    width: 58.33333%;
+  }
+
+  /* line 168, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-8 {
+    width: 66.66667%;
+  }
+
+  /* line 168, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-9 {
+    width: 75%;
+  }
+
+  /* line 168, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-10 {
+    width: 83.33333%;
+  }
+
+  /* line 168, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-11 {
+    width: 91.66667%;
+  }
+
+  /* line 168, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-12 {
+    width: 100%;
+  }
+
+  /* line 172, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-offset-0 {
+    margin-left: 0 !important;
+  }
+
+  /* line 172, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-offset-1 {
+    margin-left: 8.33333% !important;
+  }
+
+  /* line 172, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-offset-2 {
+    margin-left: 16.66667% !important;
+  }
+
+  /* line 172, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-offset-3 {
+    margin-left: 25% !important;
+  }
+
+  /* line 172, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-offset-4 {
+    margin-left: 33.33333% !important;
+  }
+
+  /* line 172, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-offset-5 {
+    margin-left: 41.66667% !important;
+  }
+
+  /* line 172, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-offset-6 {
+    margin-left: 50% !important;
+  }
+
+  /* line 172, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-offset-7 {
+    margin-left: 58.33333% !important;
+  }
+
+  /* line 172, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-offset-8 {
+    margin-left: 66.66667% !important;
+  }
+
+  /* line 172, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-offset-9 {
+    margin-left: 75% !important;
+  }
+
+  /* line 172, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-offset-10 {
+    margin-left: 83.33333% !important;
+  }
+
+  /* line 172, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-offset-11 {
+    margin-left: 91.66667% !important;
+  }
+
+  /* line 175, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xlarge-reset-order {
+    float: left;
+    left: auto;
+    margin-left: 0;
+    margin-right: 0;
+    right: auto;
+  }
+
+  /* line 183, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .column.xlarge-centered,
+  .columns.xlarge-centered {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+
+  /* line 186, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .column.xlarge-uncentered,
+  .columns.xlarge-uncentered {
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 194, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .column.xlarge-centered:last-child,
+  .columns.xlarge-centered:last-child {
+    float: none;
+  }
+
+  /* line 200, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .column.xlarge-uncentered:last-child,
+  .columns.xlarge-uncentered:last-child {
+    float: left;
+  }
+
+  /* line 205, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .column.xlarge-uncentered.opposite,
+  .columns.xlarge-uncentered.opposite {
+    float: right;
+  }
+
+  /* line 212, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .row.xlarge-collapse > .column,
+  .row.xlarge-collapse > .columns {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 215, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .row.xlarge-collapse .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* line 218, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .row.xlarge-uncollapse > .column,
+  .row.xlarge-uncollapse > .columns {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    float: left;
+  }
+}
+@media only screen and (min-width: 78.8125rem) {
+  /* line 155, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-push-0 {
+    position: relative;
+    left: 0;
+    right: auto;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-pull-0 {
+    position: relative;
+    right: 0;
+    left: auto;
+  }
+
+  /* line 155, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto;
+  }
+
+  /* line 155, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto;
+  }
+
+  /* line 155, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-push-3 {
+    position: relative;
+    left: 25%;
+    right: auto;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto;
+  }
+
+  /* line 155, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto;
+  }
+
+  /* line 155, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto;
+  }
+
+  /* line 155, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-push-6 {
+    position: relative;
+    left: 50%;
+    right: auto;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto;
+  }
+
+  /* line 155, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto;
+  }
+
+  /* line 155, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto;
+  }
+
+  /* line 155, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-push-9 {
+    position: relative;
+    left: 75%;
+    right: auto;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto;
+  }
+
+  /* line 155, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto;
+  }
+
+  /* line 155, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto;
+  }
+
+  /* line 158, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto;
+  }
+
+  /* line 163, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .column,
+  .columns {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    float: left;
+  }
+
+  /* line 168, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-1 {
+    width: 8.33333%;
+  }
+
+  /* line 168, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-2 {
+    width: 16.66667%;
+  }
+
+  /* line 168, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-3 {
+    width: 25%;
+  }
+
+  /* line 168, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-4 {
+    width: 33.33333%;
+  }
+
+  /* line 168, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-5 {
+    width: 41.66667%;
+  }
+
+  /* line 168, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-6 {
+    width: 50%;
+  }
+
+  /* line 168, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-7 {
+    width: 58.33333%;
+  }
+
+  /* line 168, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-8 {
+    width: 66.66667%;
+  }
+
+  /* line 168, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-9 {
+    width: 75%;
+  }
+
+  /* line 168, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-10 {
+    width: 83.33333%;
+  }
+
+  /* line 168, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-11 {
+    width: 91.66667%;
+  }
+
+  /* line 168, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-12 {
+    width: 100%;
+  }
+
+  /* line 172, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-offset-0 {
+    margin-left: 0 !important;
+  }
+
+  /* line 172, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-offset-1 {
+    margin-left: 8.33333% !important;
+  }
+
+  /* line 172, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-offset-2 {
+    margin-left: 16.66667% !important;
+  }
+
+  /* line 172, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-offset-3 {
+    margin-left: 25% !important;
+  }
+
+  /* line 172, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-offset-4 {
+    margin-left: 33.33333% !important;
+  }
+
+  /* line 172, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-offset-5 {
+    margin-left: 41.66667% !important;
+  }
+
+  /* line 172, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-offset-6 {
+    margin-left: 50% !important;
+  }
+
+  /* line 172, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-offset-7 {
+    margin-left: 58.33333% !important;
+  }
+
+  /* line 172, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-offset-8 {
+    margin-left: 66.66667% !important;
+  }
+
+  /* line 172, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-offset-9 {
+    margin-left: 75% !important;
+  }
+
+  /* line 172, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-offset-10 {
+    margin-left: 83.33333% !important;
+  }
+
+  /* line 172, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-offset-11 {
+    margin-left: 91.66667% !important;
+  }
+
+  /* line 175, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .xxlarge-reset-order {
+    float: left;
+    left: auto;
+    margin-left: 0;
+    margin-right: 0;
+    right: auto;
+  }
+
+  /* line 183, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .column.xxlarge-centered,
+  .columns.xxlarge-centered {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+
+  /* line 186, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .column.xxlarge-uncentered,
+  .columns.xxlarge-uncentered {
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 194, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .column.xxlarge-centered:last-child,
+  .columns.xxlarge-centered:last-child {
+    float: none;
+  }
+
+  /* line 200, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .column.xxlarge-uncentered:last-child,
+  .columns.xxlarge-uncentered:last-child {
+    float: left;
+  }
+
+  /* line 205, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .column.xxlarge-uncentered.opposite,
+  .columns.xxlarge-uncentered.opposite {
+    float: right;
+  }
+
+  /* line 212, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .row.xxlarge-collapse > .column,
+  .row.xxlarge-collapse > .columns {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 215, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .row.xxlarge-collapse .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* line 218, ../bower_components/foundation/scss/foundation/components/_grid.scss */
+  .row.xxlarge-uncollapse > .column,
+  .row.xxlarge-uncollapse > .columns {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    float: left;
   }
 }
 /* line 107, ../bower_components/foundation/scss/foundation/components/_block-grid.scss */
@@ -4569,7 +5289,7 @@ body {
   font-weight: normal;
   color: #595959;
   background-color: #ececec;
-  line-height: 140%;
+  line-height: 120%;
   font-size: 1rem;
   /*
   font-size: $base-font-size-small;
@@ -4922,42 +5642,42 @@ aside#off-canvas address a:hover, aside#off-canvas address a:active, aside#off-c
 }
 
 @font-face {
-  font-family: 'Verlag-Bold-webfont';
-  src: url("../fonts/Verlag-Bold-webfont.eot");
-  src: url("../fonts/Verlag-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Verlag-Bold-webfont.woff") format("woff"), url("../fonts/Verlag-Bold-webfont.ttf") format("truetype"), url("../fonts/Verlag-Bold-webfont.svg#Verlag-Bold-webfont") format("svg");
+  font-family: 'verlag-bold-webfont';
+  src: url("../fonts/verlag-bold-webfont.eot");
+  src: url("../fonts/verlag-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/verlag-bold-webfont.woff") format("woff"), url("../fonts/verlag-bold-webfont.ttf") format("truetype"), url("../fonts/verlag-bold-webfont.svg#verlag-bold-webfont") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
-    font-family: 'Verlag-Bold-webfont';
-    src: url("../fonts/Verlag-Bold-webfont.svg#Verlag-Bold-webfont") format("svg");
+    font-family: 'verlag-bold-webfont';
+    src: url("../fonts/verlag-bold-webfont.svg#verlag-bold-webfont") format("svg");
   }
 }
 @font-face {
-  font-family: 'Verlag-Book-webfont';
-  src: url("../fonts/Verlag-Book-webfont.eot");
-  src: url("../fonts/Verlag-Book-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Verlag-Book-webfont.woff") format("woff"), url("../fonts/Verlag-Book-webfont.ttf") format("truetype"), url("../fonts/Verlag-Book-webfont.svg#Verlag-Book-webfont") format("svg");
+  font-family: 'verlag-book-webfont';
+  src: url("../fonts/verlag-book-webfont.eot");
+  src: url("../fonts/verlag-book-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/verlag-book-webfont.woff") format("woff"), url("../fonts/verlag-book-webfont.ttf") format("truetype"), url("../fonts/verlag-book-webfont.svg#verlag-book-webfont") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
-    font-family: 'Verlag-Book-webfont';
-    src: url("../fonts/Verlag-Book-webfont.svg#Verlag-Book-webfont") format("svg");
+    font-family: 'verlag-book-webfont';
+    src: url("../fonts/verlag-book-webfont.svg#verlag-book-webfont") format("svg");
   }
 }
 @font-face {
-  font-family: 'Verlag-Light-webfont';
-  src: url("../fonts/Verlag-Light-webfont.eot");
-  src: url("../fonts/Verlag-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Verlag-Light-webfont.woff") format("woff"), url("../fonts/Verlag-Light-webfont.ttf") format("truetype"), url("../fonts/Verlag-Light-webfont.svg#Verlag-Light-webfont") format("svg");
+  font-family: 'verlag-light-webfont';
+  src: url("../fonts/verlag-light-webfont.eot");
+  src: url("../fonts/verlag-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/verlag-light-webfont.woff") format("woff"), url("../fonts/verlag-light-webfont.ttf") format("truetype"), url("../fonts/verlag-light-webfont.svg#verlag-light-webfont") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
-    font-family: 'Verlag-Light-webfont';
-    src: url("../fonts/Verlag-Light-webfont.svg#Verlag-Light-webfont") format("svg");
+    font-family: 'verlag-light-webfont';
+    src: url("../fonts/verlag-light-webfont.svg#verlag-light-webfont") format("svg");
   }
 }
 @font-face {
@@ -4967,7 +5687,7 @@ aside#off-canvas address a:hover, aside#off-canvas address a:active, aside#off-c
   font-weight: normal;
   font-style: normal;
 }
-/* line 63, ../sass/components/_typography.scss */
+/* line 69, ../sass/components/_typography.scss */
 h1, h2, h3, h4, h5 {
   font-family: "Verlag-Bold-webfont", sans-serif;
   font-weight: normal;
@@ -4977,9 +5697,10 @@ h1, h2, h3, h4, h5 {
   color: #1d1d1d;
   letter-spacing: 3px;
 }
-/* line 71, ../sass/components/_typography.scss */
+/* line 77, ../sass/components/_typography.scss */
 h1 em, h2 em, h3 em, h4 em, h5 em {
-  font-size: 1.875rem;
+  font-size: 35px;
+  font-size: 2.1875rem;
   font-family: "Libre Baskerville", serif;
   font-style: italic;
   font-weight: normal;
@@ -4988,31 +5709,32 @@ h1 em, h2 em, h3 em, h4 em, h5 em {
   display: block;
   margin-bottom: 25px;
 }
-@media only screen and (min-width: 62.0625rem) {
-  /* line 71, ../sass/components/_typography.scss */
+@media only screen and (min-width: 48.1875rem) {
+  /* line 77, ../sass/components/_typography.scss */
   h1 em, h2 em, h3 em, h4 em, h5 em {
-    font-size: 2rem;
+    font-size: 40px;
+    font-size: 2.5rem;
   }
 }
 
-/* line 85, ../sass/components/_typography.scss */
+/* line 92, ../sass/components/_typography.scss */
 h1 {
   font-size: 1.75rem;
 }
 @media only screen and (min-width: 48.1875rem) {
-  /* line 85, ../sass/components/_typography.scss */
+  /* line 92, ../sass/components/_typography.scss */
   h1 {
     font-size: 1.875rem;
   }
 }
 @media only screen and (min-width: 78.8125rem) {
-  /* line 85, ../sass/components/_typography.scss */
+  /* line 92, ../sass/components/_typography.scss */
   h1 {
     font-size: 2rem;
   }
 }
 
-/* line 94, ../sass/components/_typography.scss */
+/* line 101, ../sass/components/_typography.scss */
 h2 {
   font-family: "Verlag-Light-webfont", sans-serif;
   font-size: 1.5rem;
@@ -5022,50 +5744,50 @@ h2 {
   margin-bottom: 37.5px;
 }
 @media only screen and (min-width: 62.0625rem) {
-  /* line 94, ../sass/components/_typography.scss */
+  /* line 101, ../sass/components/_typography.scss */
   h2 {
     font-size: 1.625rem;
   }
 }
 @media only screen and (min-width: 78.8125rem) {
-  /* line 94, ../sass/components/_typography.scss */
+  /* line 101, ../sass/components/_typography.scss */
   h2 {
     font-size: 1.875rem;
   }
 }
-/* line 107, ../sass/components/_typography.scss */
+/* line 114, ../sass/components/_typography.scss */
 .intro h2 {
   margin-bottom: 0;
 }
 
-/* line 111, ../sass/components/_typography.scss */
+/* line 118, ../sass/components/_typography.scss */
 h3, h4 {
   letter-spacing: 2px;
 }
 
-/* line 114, ../sass/components/_typography.scss */
+/* line 121, ../sass/components/_typography.scss */
 h3 {
   font-size: 1.25rem;
 }
 @media only screen and (min-width: 78.8125rem) {
-  /* line 114, ../sass/components/_typography.scss */
+  /* line 121, ../sass/components/_typography.scss */
   h3 {
     font-size: 1.5rem;
   }
 }
 
-/* line 120, ../sass/components/_typography.scss */
+/* line 127, ../sass/components/_typography.scss */
 h4 {
   font-size: 1rem;
 }
 @media only screen and (min-width: 78.8125rem) {
-  /* line 120, ../sass/components/_typography.scss */
+  /* line 127, ../sass/components/_typography.scss */
   h4 {
     font-size: 1.125rem;
   }
 }
 
-/* line 126, ../sass/components/_typography.scss */
+/* line 133, ../sass/components/_typography.scss */
 h5 {
   font-size: 16px;
   font-size: 1rem;
@@ -5073,31 +5795,38 @@ h5 {
   letter-spacing: 0.5px;
 }
 
-/* line 131, ../sass/components/_typography.scss */
+/* line 138, ../sass/components/_typography.scss */
 p, ul, ol {
   margin-bottom: 20px;
 }
-/* line 133, ../sass/components/_typography.scss */
+/* line 140, ../sass/components/_typography.scss */
 p:last-child, ul:last-child, ol:last-child {
   margin-bottom: 0;
 }
 
-/* line 147, ../sass/components/_typography.scss */
+@media only screen and (min-width: 78.8125rem) {
+  /* line 144, ../sass/components/_typography.scss */
+  p, h5, ul {
+    font-size: 1.25rem;
+  }
+}
+
+/* line 154, ../sass/components/_typography.scss */
 a {
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-/* line 149, ../sass/components/_typography.scss */
+/* line 156, ../sass/components/_typography.scss */
 a:link, a:visited {
   color: #67aebf;
 }
-/* line 152, ../sass/components/_typography.scss */
+/* line 159, ../sass/components/_typography.scss */
 a:hover, a:active {
   color: #1d1d1d;
 }
 
-/* line 156, ../sass/components/_typography.scss */
+/* line 163, ../sass/components/_typography.scss */
 small {
   font-size: 14px;
   font-size: 0.875rem;
@@ -5106,7 +5835,7 @@ small {
   line-height: 130%;
 }
 
-/* line 162, ../sass/components/_typography.scss */
+/* line 169, ../sass/components/_typography.scss */
 blockquote {
   border: none;
   padding: 25px;
@@ -5114,18 +5843,18 @@ blockquote {
   position: relative;
 }
 @media only screen and (min-width: 37.5625rem) {
-  /* line 162, ../sass/components/_typography.scss */
+  /* line 169, ../sass/components/_typography.scss */
   blockquote {
     padding: 25px 50px;
   }
 }
 @media only screen and (min-width: 62.0625rem) and (max-width: 78.75rem) {
-  /* line 162, ../sass/components/_typography.scss */
+  /* line 169, ../sass/components/_typography.scss */
   blockquote {
     padding: 25px 75px;
   }
 }
-/* line 173, ../sass/components/_typography.scss */
+/* line 180, ../sass/components/_typography.scss */
 blockquote p {
   font-family: "Libre Baskerville", serif;
   font-style: italic;
@@ -5135,12 +5864,12 @@ blockquote p {
   position: relative;
 }
 @media only screen and (min-width: 62.0625rem) {
-  /* line 173, ../sass/components/_typography.scss */
+  /* line 180, ../sass/components/_typography.scss */
   blockquote p {
     font-size: 1.5rem;
   }
 }
-/* line 183, ../sass/components/_typography.scss */
+/* line 190, ../sass/components/_typography.scss */
 blockquote p:before, blockquote p:after {
   content: "";
   width: 31px;
@@ -5156,11 +5885,11 @@ blockquote p:before, blockquote p:after {
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
-/* line 190, ../sass/components/_typography.scss */
+/* line 197, ../sass/components/_typography.scss */
 .svg blockquote p:before, .svg blockquote p:after {
   background-image: url("../images/open-quotes.svg");
 }
-/* line 197, ../sass/components/_typography.scss */
+/* line 204, ../sass/components/_typography.scss */
 blockquote p:after {
   top: auto;
   right: 0;
@@ -5169,11 +5898,11 @@ blockquote p:after {
   position: absolute;
   background-image: url("../images/close-quotes.png");
 }
-/* line 200, ../sass/components/_typography.scss */
+/* line 207, ../sass/components/_typography.scss */
 .svg blockquote p:after {
   background-image: url("../images/close-quotes.svg");
 }
-/* line 205, ../sass/components/_typography.scss */
+/* line 212, ../sass/components/_typography.scss */
 blockquote footer {
   font-family: "Verlag-Book-webfont", sans-serif;
 }
@@ -5256,12 +5985,12 @@ blockquote footer {
 .mid-line-hd {
   text-align: center;
   line-height: 90%;
-  margin-bottom: 12.5px;
+  margin-bottom: 20px;
 }
 @media only screen and (min-width: 78.8125rem) {
   /* line 53, ../sass/components/_global.scss */
   .mid-line-hd {
-    margin-bottom: 37.5px;
+    margin-bottom: 20px;
   }
 }
 /* line 61, ../sass/components/_global.scss */
@@ -5948,15 +6677,15 @@ li:after {
 }
 
 /* line 61, ../sass/components/_buttons.scss */
-a.grid-button {
+.grid-button {
   display: block;
 }
 /* line 63, ../sass/components/_buttons.scss */
-a.grid-button:link, a.grid-button:visited {
+.grid-button:link, .grid-button:visited {
   color: #1d1d1d;
 }
 /* line 66, ../sass/components/_buttons.scss */
-a.grid-button .box {
+.grid-button .box {
   display: block;
   background-color: white;
   color: #595959;
@@ -5966,33 +6695,37 @@ a.grid-button .box {
   transition: all 0.3s ease;
 }
 /* line 71, ../sass/components/_buttons.scss */
-a.grid-button .box .more {
+.grid-button .box .more {
   color: #67aebf;
 }
 /* line 74, ../sass/components/_buttons.scss */
-a.grid-button .box .inner-wrapper {
+.grid-button .box .inner-wrapper {
   padding: 0 20px;
 }
 @media only screen and (min-width: 62.0625rem) {
   /* line 74, ../sass/components/_buttons.scss */
-  a.grid-button .box .inner-wrapper {
+  .grid-button .box .inner-wrapper {
     padding: 0 40px;
   }
 }
 /* line 81, ../sass/components/_buttons.scss */
-a.grid-button .box:before {
+.grid-button .box footer p {
+  margin-bottom: 0;
+}
+/* line 86, ../sass/components/_buttons.scss */
+.grid-button .box:before {
   padding-top: 100%;
   content: "";
   display: block;
 }
 @media only screen and (min-width: 30.0625rem) and (max-width: 37.5rem) {
-  /* line 81, ../sass/components/_buttons.scss */
-  a.grid-button .box:before {
+  /* line 86, ../sass/components/_buttons.scss */
+  .grid-button .box:before {
     padding-top: 50%;
   }
 }
-/* line 90, ../sass/components/_buttons.scss */
-a.grid-button .box.text:after {
+/* line 95, ../sass/components/_buttons.scss */
+.grid-button .box.text:after {
   -webkit-transition: border-color 0.3s ease;
   -moz-transition: border-color 0.3s ease;
   transition: border-color 0.3s ease;
@@ -6010,8 +6743,8 @@ a.grid-button .box.text:after {
   margin-left: -28px;
 }
 @media only screen and (min-width: 37.5625rem) {
-  /* line 90, ../sass/components/_buttons.scss */
-  a.grid-button .box.text:after {
+  /* line 95, ../sass/components/_buttons.scss */
+  .grid-button .box.text:after {
     width: 0;
     height: 0;
     border-top: 30px solid transparent;
@@ -6026,8 +6759,8 @@ a.grid-button .box.text:after {
     margin-top: -28px;
   }
 }
-/* line 101, ../sass/components/_buttons.scss */
-a.grid-button.link-2 .box.text:after {
+/* line 106, ../sass/components/_buttons.scss */
+.grid-button.link-2 .box.text:after {
   width: 0;
   height: 0;
   border-left: 30px solid transparent;
@@ -6041,8 +6774,8 @@ a.grid-button.link-2 .box.text:after {
   margin-left: -28px;
 }
 @media only screen and (min-width: 37.5625rem) {
-  /* line 101, ../sass/components/_buttons.scss */
-  a.grid-button.link-2 .box.text:after {
+  /* line 106, ../sass/components/_buttons.scss */
+  .grid-button.link-2 .box.text:after {
     width: 0;
     height: 0;
     border-top: 30px solid transparent;
@@ -6058,8 +6791,8 @@ a.grid-button.link-2 .box.text:after {
     z-index: 999;
   }
 }
-/* line 109, ../sass/components/_buttons.scss */
-a.grid-button.link-3 .box.text:after {
+/* line 114, ../sass/components/_buttons.scss */
+.grid-button.link-3 .box.text:after {
   width: 0;
   height: 0;
   border-left: 30px solid transparent;
@@ -6073,8 +6806,8 @@ a.grid-button.link-3 .box.text:after {
   margin-left: -28px;
 }
 @media only screen and (min-width: 37.5625rem) {
-  /* line 109, ../sass/components/_buttons.scss */
-  a.grid-button.link-3 .box.text:after {
+  /* line 114, ../sass/components/_buttons.scss */
+  .grid-button.link-3 .box.text:after {
     width: 0;
     height: 0;
     border-top: 30px solid transparent;
@@ -6090,8 +6823,8 @@ a.grid-button.link-3 .box.text:after {
   }
 }
 @media only screen and (min-width: 62.0625rem) {
-  /* line 109, ../sass/components/_buttons.scss */
-  a.grid-button.link-3 .box.text:after {
+  /* line 114, ../sass/components/_buttons.scss */
+  .grid-button.link-3 .box.text:after {
     width: 0;
     height: 0;
     border-left: 30px solid transparent;
@@ -6105,20 +6838,20 @@ a.grid-button.link-3 .box.text:after {
     margin-left: -28px;
   }
 }
-/* line 120, ../sass/components/_buttons.scss */
-a.grid-button:hover .box, a.grid-button:active .box {
+/* line 125, ../sass/components/_buttons.scss */
+.grid-button:hover .box, .grid-button:active .box {
   background-color: #67aebf;
   color: white;
 }
-/* line 123, ../sass/components/_buttons.scss */
-a.grid-button:hover .box p, a.grid-button:hover .box h1, a.grid-button:hover .box h2, a.grid-button:hover .box h3, a.grid-button:hover .box h4, a.grid-button:hover .box .more, a.grid-button:active .box p, a.grid-button:active .box h1, a.grid-button:active .box h2, a.grid-button:active .box h3, a.grid-button:active .box h4, a.grid-button:active .box .more {
+/* line 128, ../sass/components/_buttons.scss */
+.grid-button:hover .box p, .grid-button:hover .box h1, .grid-button:hover .box h2, .grid-button:hover .box h3, .grid-button:hover .box h4, .grid-button:hover .box .more, .grid-button:active .box p, .grid-button:active .box h1, .grid-button:active .box h2, .grid-button:active .box h3, .grid-button:active .box h4, .grid-button:active .box .more {
   color: white;
   /* &:before,&:after{
   	background-color: white;
   } */
 }
-/* line 130, ../sass/components/_buttons.scss */
-a.grid-button:hover .box.text:after, a.grid-button:active .box.text:after {
+/* line 135, ../sass/components/_buttons.scss */
+.grid-button:hover .box.text:after, .grid-button:active .box.text:after {
   width: 0;
   height: 0;
   border-left: 30px solid transparent;
@@ -6133,8 +6866,8 @@ a.grid-button:hover .box.text:after, a.grid-button:active .box.text:after {
   border-bottom: 30px solid #67aebf;
 }
 @media only screen and (min-width: 37.5625rem) {
-  /* line 130, ../sass/components/_buttons.scss */
-  a.grid-button:hover .box.text:after, a.grid-button:active .box.text:after {
+  /* line 135, ../sass/components/_buttons.scss */
+  .grid-button:hover .box.text:after, .grid-button:active .box.text:after {
     width: 0;
     height: 0;
     border-top: 30px solid transparent;
@@ -6150,8 +6883,8 @@ a.grid-button:hover .box.text:after, a.grid-button:active .box.text:after {
     border-right: 30px solid #67aebf;
   }
 }
-/* line 139, ../sass/components/_buttons.scss */
-a.grid-button:hover.link-2 .box.text:after, a.grid-button:active.link-2 .box.text:after {
+/* line 144, ../sass/components/_buttons.scss */
+.grid-button:hover.link-2 .box.text:after, .grid-button:active.link-2 .box.text:after {
   width: 0;
   height: 0;
   border-left: 30px solid transparent;
@@ -6166,8 +6899,8 @@ a.grid-button:hover.link-2 .box.text:after, a.grid-button:active.link-2 .box.tex
   border-bottom: 30px solid #67aebf;
 }
 @media only screen and (min-width: 37.5625rem) {
-  /* line 139, ../sass/components/_buttons.scss */
-  a.grid-button:hover.link-2 .box.text:after, a.grid-button:active.link-2 .box.text:after {
+  /* line 144, ../sass/components/_buttons.scss */
+  .grid-button:hover.link-2 .box.text:after, .grid-button:active.link-2 .box.text:after {
     width: 0;
     height: 0;
     border-top: 30px solid transparent;
@@ -6184,8 +6917,8 @@ a.grid-button:hover.link-2 .box.text:after, a.grid-button:active.link-2 .box.tex
     border-left: 30px solid #67aebf;
   }
 }
-/* line 147, ../sass/components/_buttons.scss */
-a.grid-button:hover.link-3 .box.text:after, a.grid-button:active.link-3 .box.text:after {
+/* line 152, ../sass/components/_buttons.scss */
+.grid-button:hover.link-3 .box.text:after, .grid-button:active.link-3 .box.text:after {
   width: 0;
   height: 0;
   border-left: 30px solid transparent;
@@ -6200,8 +6933,8 @@ a.grid-button:hover.link-3 .box.text:after, a.grid-button:active.link-3 .box.tex
   border-bottom: 30px solid #67aebf;
 }
 @media only screen and (min-width: 37.5625rem) {
-  /* line 147, ../sass/components/_buttons.scss */
-  a.grid-button:hover.link-3 .box.text:after, a.grid-button:active.link-3 .box.text:after {
+  /* line 152, ../sass/components/_buttons.scss */
+  .grid-button:hover.link-3 .box.text:after, .grid-button:active.link-3 .box.text:after {
     width: 0;
     height: 0;
     border-top: 30px solid transparent;
@@ -6218,8 +6951,8 @@ a.grid-button:hover.link-3 .box.text:after, a.grid-button:active.link-3 .box.tex
   }
 }
 @media only screen and (min-width: 62.0625rem) {
-  /* line 147, ../sass/components/_buttons.scss */
-  a.grid-button:hover.link-3 .box.text:after, a.grid-button:active.link-3 .box.text:after {
+  /* line 152, ../sass/components/_buttons.scss */
+  .grid-button:hover.link-3 .box.text:after, .grid-button:active.link-3 .box.text:after {
     width: 0;
     height: 0;
     border-left: 30px solid transparent;
@@ -6235,7 +6968,7 @@ a.grid-button:hover.link-3 .box.text:after, a.grid-button:active.link-3 .box.tex
   }
 }
 
-/* line 159, ../sass/components/_buttons.scss */
+/* line 164, ../sass/components/_buttons.scss */
 .gform_button {
   display: inline-block;
   text-align: center;
@@ -7141,41 +7874,42 @@ button {
   width: 100%;
   background-color: white;
   position: relative;
+  overflow: hidden;
 }
-/* line 10, ../sass/components/_grid.scss */
+/* line 11, ../sass/components/_grid.scss */
 .grid .box:before {
   content: "";
   padding-top: 100%;
   display: block;
 }
 @media only screen and (min-width: 30.0625rem) and (max-width: 37.5rem) {
-  /* line 10, ../sass/components/_grid.scss */
+  /* line 11, ../sass/components/_grid.scss */
   .grid .box:before {
     padding-top: 50%;
   }
 }
-/* line 19, ../sass/components/_grid.scss */
+/* line 20, ../sass/components/_grid.scss */
 .grid .box.text:before {
   padding-top: 100%;
 }
 @media only screen and (min-width: 62.0625rem) {
-  /* line 25, ../sass/components/_grid.scss */
+  /* line 26, ../sass/components/_grid.scss */
   .grid .box.double:before {
     padding-top: 50%;
   }
 }
-/* line 32, ../sass/components/_grid.scss */
+/* line 33, ../sass/components/_grid.scss */
 #header-images .grid .box:before {
   padding-top: 100%;
 }
-/* line 36, ../sass/components/_grid.scss */
+/* line 37, ../sass/components/_grid.scss */
 #header-images .grid .box.double:before {
   padding-top: 50%;
 }
-/* line 41, ../sass/components/_grid.scss */
+/* line 42, ../sass/components/_grid.scss */
 .grid .box .inner-wrapper {
   top: 0;
-  right: 0;
+  right: -2px;
   bottom: 0;
   left: 0;
   position: absolute;
@@ -7190,12 +7924,12 @@ button {
   padding: 0 25px;
 }
 @media only screen and (min-width: 78.8125rem) {
-  /* line 41, ../sass/components/_grid.scss */
+  /* line 42, ../sass/components/_grid.scss */
   .grid .box .inner-wrapper {
-    padding: 0 50px;
+    padding: 0 37.5px;
   }
 }
-/* line 50, ../sass/components/_grid.scss */
+/* line 51, ../sass/components/_grid.scss */
 .grid .box .inner-wrapper:before {
   vertical-align: middle;
   display: inline-block;
@@ -7215,32 +7949,32 @@ button {
   vertical-align: middle;
 }
 
-/* line 59, ../sass/components/_grid.scss */
+/* line 60, ../sass/components/_grid.scss */
 a.block-link {
   display: block;
 }
-/* line 61, ../sass/components/_grid.scss */
+/* line 62, ../sass/components/_grid.scss */
 a.block-link:link, a.block-link:visited {
   color: #595959;
 }
-/* line 63, ../sass/components/_grid.scss */
+/* line 64, ../sass/components/_grid.scss */
 a.block-link:link span.more, a.block-link:visited span.more {
   color: #67aebf;
 }
-/* line 67, ../sass/components/_grid.scss */
+/* line 68, ../sass/components/_grid.scss */
 a.block-link:hover, a.block-link:active {
   color: white;
   background-color: #67aebf;
 }
-/* line 70, ../sass/components/_grid.scss */
+/* line 71, ../sass/components/_grid.scss */
 a.block-link:hover span.more, a.block-link:active span.more {
   color: white;
 }
-/* line 73, ../sass/components/_grid.scss */
+/* line 74, ../sass/components/_grid.scss */
 a.block-link:hover h3, a.block-link:active h3 {
   color: white;
 }
-/* line 76, ../sass/components/_grid.scss */
+/* line 77, ../sass/components/_grid.scss */
 a.block-link:hover h3 span:before, a.block-link:hover h3 span:after, a.block-link:active h3 span:before, a.block-link:active h3 span:after {
   background-color: white;
 }
@@ -7623,7 +8357,7 @@ a.block-link:hover h3 span:before, a.block-link:hover h3 span:after, a.block-lin
 @media only screen and (min-width: 78.8125rem) {
   /* line 1, ../sass/components/_structural.scss */
   .main-container {
-    max-width: 78.75rem;
+    max-width: 72.5rem;
   }
 }
 
@@ -7819,7 +8553,7 @@ a.block-link:hover h3 span:before, a.block-link:hover h3 span:after, a.block-lin
 @media only screen and (min-width: 48.1875rem) {
   /* line 122, ../sass/templates/_home.scss */
   .bg-image-break:before {
-    padding-top: 35%;
+    padding-top: 45%;
   }
 }
 /* line 134, ../sass/templates/_home.scss */
@@ -8130,6 +8864,11 @@ a.block-link:hover h3 span:before, a.block-link:hover h3 span:after, a.block-lin
   background-color: #d5edf3;
 }
 
+/* line 122, ../sass/templates/_rooms.scss */
+#booking-request p {
+  margin-bottom: 50px;
+}
+
 /* line 1, ../sass/templates/_local-area.scss */
 #other-places {
   font-family: "Verlag-Book-webfont", sans-serif;
@@ -8143,7 +8882,7 @@ a.block-link:hover h3 span:before, a.block-link:hover h3 span:after, a.block-lin
   margin-bottom: 5px;
 }
 /* line 9, ../sass/templates/_local-area.scss */
-#other-places p {
+#other-places p, #other-places a {
   font-size: 1rem;
 }
 
@@ -8160,12 +8899,16 @@ a.block-link:hover h3 span:before, a.block-link:hover h3 span:after, a.block-lin
   width: 100%;
   float: left;
 }
+/* line 4, ../sass/templates/_about.scss */
+#proprietors .tinted-box p {
+  margin-bottom: 0;
+}
 @media only screen and (min-width: 30.0625rem) {
   /* line 3, ../sass/templates/_about.scss */
   #proprietors .tinted-box {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
-    width: 75%;
+    width: 66.66667%;
     float: left;
     margin-left: auto;
     margin-right: auto;
@@ -8193,7 +8936,7 @@ a.block-link:hover h3 span:before, a.block-link:hover h3 span:after, a.block-lin
     float: none;
   }
 }
-/* line 24, ../sass/templates/_about.scss */
+/* line 27, ../sass/templates/_about.scss */
 #proprietors .tinted-box .tinted-box-inner {
   margin: 0 -0.9375rem;
   max-width: none;
@@ -8205,11 +8948,11 @@ a.block-link:hover h3 span:before, a.block-link:hover h3 span:after, a.block-lin
   display: table;
   clear: both;
 }
-/* line 28, ../sass/templates/_about.scss */
+/* line 31, ../sass/templates/_about.scss */
 #proprietors figure, #proprietors main {
   float: left;
 }
-/* line 31, ../sass/templates/_about.scss */
+/* line 34, ../sass/templates/_about.scss */
 #proprietors figure {
   padding-left: 0;
   padding-right: 0;
@@ -8217,16 +8960,7 @@ a.block-link:hover h3 span:before, a.block-link:hover h3 span:after, a.block-lin
   float: left;
 }
 @media only screen and (min-width: 48.1875rem) {
-  /* line 31, ../sass/templates/_about.scss */
-  #proprietors figure {
-    padding-left: 0;
-    padding-right: 0;
-    width: 41.66667%;
-    float: left;
-  }
-}
-@media only screen and (min-width: 62.0625rem) {
-  /* line 31, ../sass/templates/_about.scss */
+  /* line 34, ../sass/templates/_about.scss */
   #proprietors figure {
     padding-left: 0;
     padding-right: 0;
@@ -8234,12 +8968,30 @@ a.block-link:hover h3 span:before, a.block-link:hover h3 span:after, a.block-lin
     float: left;
   }
 }
-/* line 48, ../sass/templates/_about.scss */
+@media only screen and (min-width: 62.0625rem) {
+  /* line 34, ../sass/templates/_about.scss */
+  #proprietors figure {
+    padding-left: 0;
+    padding-right: 0;
+    width: 25%;
+    float: left;
+  }
+}
+@media only screen and (min-width: 78.8125rem) {
+  /* line 34, ../sass/templates/_about.scss */
+  #proprietors figure {
+    padding-left: 0;
+    padding-right: 0;
+    width: 25%;
+    float: left;
+  }
+}
+/* line 57, ../sass/templates/_about.scss */
 #proprietors figure img {
   width: 100%;
   display: block;
 }
-/* line 53, ../sass/templates/_about.scss */
+/* line 62, ../sass/templates/_about.scss */
 #proprietors main {
   text-align: left;
   padding-left: 0;
@@ -8249,21 +9001,31 @@ a.block-link:hover h3 span:before, a.block-link:hover h3 span:after, a.block-lin
   padding: 25px;
 }
 @media only screen and (min-width: 48.1875rem) {
-  /* line 53, ../sass/templates/_about.scss */
+  /* line 62, ../sass/templates/_about.scss */
   #proprietors main {
     padding-left: 0;
     padding-right: 0;
-    width: 58.33333%;
+    width: 66.66667%;
     float: left;
     padding: 25px;
   }
 }
 @media only screen and (min-width: 62.0625rem) {
-  /* line 53, ../sass/templates/_about.scss */
+  /* line 62, ../sass/templates/_about.scss */
   #proprietors main {
     padding-left: 0;
     padding-right: 0;
-    width: 66.66667%;
+    width: 75%;
+    float: left;
+    padding: 25px;
+  }
+}
+@media only screen and (min-width: 78.8125rem) {
+  /* line 62, ../sass/templates/_about.scss */
+  #proprietors main {
+    padding-left: 0;
+    padding-right: 0;
+    width: 75%;
     float: left;
     padding: 25px;
   }

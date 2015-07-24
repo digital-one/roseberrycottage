@@ -16,7 +16,7 @@ $column-gutter: em-calc(30); //30px
 $block-grid-default-spacing: em-calc(20);
 $total-columns: 12;
 $row-width: em-calc(1260); //1260px
-
+$include-xl-html-grid-classes: true;
 // Media Queries
 $screen: "only screen" !default;
 
@@ -65,8 +65,8 @@ $helvetica: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
 
 $base-font-size: rem-calc(16);
 $base-font-size-small: rem-calc(14);
-$base-line-height: 140%; 
-$base-line-height-small: 130%;
+$base-line-height: 120%; 
+$base-line-height-small: 120%;
 $large-font-size: rem-calc(36);
 $h1-font-size: rem-calc(30) !default;
 $h1-font-size-small: rem-calc(28) !default;
@@ -82,9 +82,9 @@ $h5-font-size: rem-calc(18) !default;
 $h5-font-size-large: rem-calc(20) !default;
 $h6-font-size: 1rem !default;
 $p-size-smaller: rem-calc(16);
-$p-size-large: rem-calc(18);
+$p-size-large: rem-calc(16);
 $p-size-xlarge: rem-calc(20);
-$large-line-height: 145%;
+$large-line-height: 130%;
 
 /* Helpers */
 

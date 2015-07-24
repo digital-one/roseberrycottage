@@ -1,12 +1,15 @@
 #proprietors{
 	@extend .clearfix;
 	.tinted-box{
+		p{
+			margin-bottom: 0;
+		}
 		@include grid-column(
 			$columns:12
 			);
 		@media #{$small-up} { 
 			@include grid-column(
-				$columns:9,
+				$columns:8,
 				$center: true
 			);
 		}
@@ -35,13 +38,19 @@
 		);
 		@media #{$large-up} { 
 			@include grid-column(
-				$columns:5,
+				$columns:4,
 				$collapse:true
 			);
 		}
 		@media #{$xlarge-up} { 
 			@include grid-column(
-				$columns:4,
+				$columns:3,
+				$collapse:true
+			);
+		}
+		@media #{$xxlarge-up} { 
+			@include grid-column(
+				$columns:3,
 				$collapse:true
 			);
 		}
@@ -60,14 +69,21 @@
 		padding: $helper-standard;
 		@media #{$large-up} { 
 			@include grid-column(
-				$columns:7,
+				$columns:8,
 				$collapse:true
 			);
 			padding: $helper-standard;
 		}
 		@media #{$xlarge-up} { 
 			@include grid-column(
-				$columns:8,
+				$columns:9,
+				$collapse:true
+			);
+			padding: $helper-standard;
+		}
+		@media #{$xxlarge-up} { 
+			@include grid-column(
+				$columns:9,
 				$collapse:true
 			);
 			padding: $helper-standard;

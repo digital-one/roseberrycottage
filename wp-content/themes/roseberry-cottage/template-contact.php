@@ -2,8 +2,11 @@
 <?php get_header() ?>
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
-	<section class="bg-image-break centered-text parallax" data-parallax="scroll" data-image-src="<?php echo get_template_directory_uri(); ?>/images/house-exterior.jpg">
-	<div class="inner-wrapper"></div>
+		<?php
+	list($src,$w,$h) = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'banner-image'); ?>
+	<section class="bg-image-break centered-text">
+		<span class="slide outer-wrapper" data-image="<?php echo $src ?>">
+</span>
 </section>
 
 <?php /*

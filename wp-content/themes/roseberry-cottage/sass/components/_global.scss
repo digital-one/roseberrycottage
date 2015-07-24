@@ -53,9 +53,9 @@
 .mid-line-hd{
 	text-align: center;
 	line-height:90%;
-	margin-bottom: $helper-thin;
+	margin-bottom: 20px;
 	@media #{$xxlarge-up} { 
-		margin-bottom: $helper-medium;
+		margin-bottom: 20px;
 	}
 	span{
 		&.wrap{

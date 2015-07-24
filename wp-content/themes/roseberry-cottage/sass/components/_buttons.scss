@@ -58,7 +58,7 @@
 }
 
 
-a.grid-button{
+.grid-button{
 	display: block;
 	&:link,&:visited{
 		color: $dark-grey;
@@ -75,6 +75,11 @@ a.grid-button{
 			padding: 0 20px;
 			@media #{$xlarge-up} { 
 				padding: 0 40px;
+			}
+		}
+		footer{
+			p{
+				margin-bottom: 0;
 			}
 		}
 		@include transition(all .3s ease);

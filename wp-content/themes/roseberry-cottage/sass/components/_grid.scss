@@ -7,6 +7,7 @@
         width:100%;
         background-color: white;
         position: relative;
+        overflow:hidden;
         &:before{
             content:"";
             padding-top:100%;
@@ -39,13 +40,13 @@
             }
         }
         .inner-wrapper{
-            @include abs-pos(0,0,0,0);
+            @include abs-pos(0,-2px,0,0);
             @include bg-cover;
             height:100%;
             display: inline-block;
             padding: 0 $helper-standard;
             @media #{$xxlarge-up} {
-                padding: 0 $helper-thick;
+                padding: 0 $helper-medium;
             }
             &:before{
                 vertical-align: middle;

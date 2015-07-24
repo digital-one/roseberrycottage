@@ -171,7 +171,7 @@ add_action('admin_init', 'admin_init');
 
 // enqueue google fonts
 function google_fonts() {
-  wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+  wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic');
   wp_enqueue_style( 'googleFonts');
 }
 function font_awesome(){
