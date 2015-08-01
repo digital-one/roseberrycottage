@@ -75,7 +75,7 @@ h1,h2,h3,h4,h5{
 	color: $dark-grey;
     letter-spacing:3px;
 	em{
-		@include font-size(35px);
+		@include font-size(30px);
          @media #{$large-up} { 
             @include font-size(40px);
            // font-size: $h1-font-size-large;
@@ -86,7 +86,10 @@ h1,h2,h3,h4,h5{
 		text-transform: lowercase;
 		letter-spacing: 0;
 		display: block;
-		margin-bottom: $helper-standard;
+        margin-bottom: 12px;
+        @media #{$medium-up} { 
+		  margin-bottom: $helper-standard;
+        }
 	}
 }
 h1{
@@ -105,14 +108,11 @@ h2{
     letter-spacing:normal;
     line-height: 140%;
     margin-bottom: $helper-medium;
-    @media #{$xlarge-up} { 
+    @media #{$medium-up} { 
         font-size: $h2-font-size-large;
     }
     @media #{$xxlarge-up} { 
          font-size: $h2-font-size-xlarge;
-    }
-    .intro &{
-        margin-bottom: 0;
     }
 }
 h3,h4{
@@ -131,7 +131,7 @@ h4{
     }
 }
 h5{
-	@include font-size(16px);
+	@include font-size(18px);
 	text-transform: none;
 	letter-spacing: 0.5px;
 }
@@ -140,6 +140,9 @@ p,ul,ol{
 	&:last-child{
 		margin-bottom: 0;
 	}
+}
+ul,ol{
+    margin-bottom: 30px;
 }
 p,h5,ul{
     @media #{$xlarge-up} { 
@@ -160,20 +163,28 @@ a{
 		color: $dark-grey;
 	}
 }
+strong{
+    font-weight: normal;
+    font-family: $verlag-book;
+    color: $dark-grey;
+}
 small{
-    @include font-size(14px);
+    @include font-size(12px);
+    @media #{$medium-up} { 
+        @include font-size(14px);
+    }
     font-family: $verlag-book;
     display: block;
     line-height: 130%;
 }
 blockquote{
     border:none;
-    padding:$helper-standard;
+   // padding:$helper-standard;
     @media #{$medium-up} { 
-        padding:$helper-standard $helper-thick;
+       //padding:$helper-standard 0;
     }
-    @media #{$xlarge-only}{
-         padding:$helper-standard $helper-thicker;
+    @media #{$xlarge-up}{
+         padding: 0 $helper-standard;
     }
     margin:0;
     position: relative;
@@ -181,15 +192,21 @@ blockquote{
         font-family:$libre;
         font-style:italic;
         color: $dark-grey;
-        font-size: $h3-font-size;
+        font-size: $h4-font-size;
         @media #{$xlarge-up} { 
-             font-size: $h2-font-size;
+             font-size: $h3-font-size;
         }
-        padding: 0 40px;
+        padding: 0 25px;
+        @media #{$medium-up} { 
+            padding: 0 40px;
+        }
         position: relative;
         &:before,&:after{
             content:"";
-            width:31px;
+            width:21px;
+            @media #{$medium-up} { 
+                width:31px;
+            }
             height:25px;
             display: block;
             @include abs-pos(0,auto,auto,0);

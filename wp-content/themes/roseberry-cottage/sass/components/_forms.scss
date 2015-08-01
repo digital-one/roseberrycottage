@@ -22,6 +22,9 @@ textarea,
   	@include font-size(16px);
   	height: 40px;
   	padding: 5px 10px;
+  	.ie &{
+  		line-height: 1;
+  	}
   	line-height: 40px;
   	width: 100% !important;
   	color: $grey;
@@ -211,9 +214,9 @@ button{
 	}
 }
 .gform_ajax_spinner{
-	@include abs-pos(0,auto,auto,0);
-	width:40px;
-	height:40px;
+	@include abs-pos(20px,auto,auto,0.9375rem);
+	//width:40px;
+	//height:40px;
 }	
 .gform_confirmation_message{
 

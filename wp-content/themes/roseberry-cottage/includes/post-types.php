@@ -24,7 +24,7 @@ function register_cpt_location() {
                 'label'               => __( 'cpt-location', 'text_domain' ),
                 'description'         => __( 'Locations', 'text_domain' ),
                 'labels'              => $labels,
-                'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', ),
+                'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'page-attributes'),
                 'hierarchical'        => false,
                 'public'              => true,
                 'show_ui'             => true,

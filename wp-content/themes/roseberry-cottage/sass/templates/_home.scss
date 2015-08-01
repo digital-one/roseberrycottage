@@ -24,8 +24,12 @@
 }
 .offset-section{
 	padding: $helper-standard 0 $helper-thick;
+	@extend .clearfix;
 	.home &{
-		padding:$helper-standard 0;	
+		padding: 20px 0;
+		@media #{$medium-up} {
+			padding:$helper-standard 0;	
+		}
 	}
 
 	background-color: transparent;
@@ -45,7 +49,9 @@
 	}
 	.main-container{
 		background-color: white;
-		padding: $helper-standard 0;
+		@media #{$medium-up} {
+			padding: $helper-standard 0;
+		}
 		position: relative;
 		z-index: 2;
 		//margin-top: -$helper-standard;
@@ -69,6 +75,15 @@
 #about{
 	footer{
 		padding: 10px 0 5px;
+		a{
+			margin: 0 auto 10px;
+			display: block;
+			max-width: 160px;
+			@media #{$medium-up} {
+				margin: 0 10px 0;
+				display: inline-block;
+			}
+		}
 	}
 }
 .section-footer{
@@ -121,7 +136,7 @@
 	}
 	&:before{
 		content:"";
-		padding-top: 50%;
+		padding-top: 80%;
 		@media #{$medium-up} {
 			//padding-top: 60%;
 		}
@@ -140,6 +155,7 @@
 			background-color: white;
 			display: block;
 			@include abs-pos(auto,auto,0,50%);
+			z-index: 9999;
 		}
 		&:after{
 			content:"";
@@ -150,6 +166,7 @@
 			@include abs-pos(auto,auto,20%,50%);
 			display: block;
 			margin-left: -3px;
+			z-index: 9999;
 		}
 	}
 	.inner-wrapper{
@@ -167,6 +184,8 @@
 			width:98%;
 			vertical-align: middle;
 			h3{
+
+				@include text-shadow ;
 				margin-bottom: 0;
 			}
 		}

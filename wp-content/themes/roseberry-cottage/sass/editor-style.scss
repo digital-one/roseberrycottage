@@ -1,0 +1,42 @@
+ @import "settings"; 
+ @import "helpers/all";
+body{
+	background-color: white;
+}
+
+	a:link,a:visited{
+		color: $dark-grey;
+		border-bottom:1px dotted $dark-grey;
+	}
+	a:hover,a:focus,a:active{
+		color: $blue-grey;
+		border-color: $blue-grey;
+	}
+
+ul{
+	li{
+		position: relative;
+		padding-left: 25px;
+		margin-bottom: 15px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+		&:before{
+			content:"";
+			width:3px;
+			height:3px;
+			display: block;
+			background-color: $blue-grey;
+			@include border-radius(50%);
+			@include abs-pos(12px,auto,auto,0);
+		}
+		&:after{
+			content:"";
+			width:10px;
+			height:1px;
+			display: block;
+			background-color: $blue-grey;
+			@include abs-pos(13px,auto,auto,3px);
+		}
+	}
+}

@@ -1,20 +1,25 @@
 .grid{
+    .grid-row{
+        @extend .clearfix;
+        width:100%;
+        display: block;
+    }
     .columns{
          padding:0;
     }
     .box{
-        display: block;
+        //display: block;
         width:100%;
         background-color: white;
         position: relative;
-        overflow:hidden;
+        margin-top:-1px;
         &:before{
             content:"";
             padding-top:100%;
+            display: block;
             @media #{$small-only} {
                 padding-top:50%;
             }
-            display: block;
         }
         &.text{
             &:before{
@@ -40,13 +45,16 @@
             }
         }
         .inner-wrapper{
-            @include abs-pos(0,-2px,0,0);
+            @include abs-pos(0,0,0,0);
             @include bg-cover;
             height:100%;
             display: inline-block;
             padding: 0 $helper-standard;
+             @media #{$medium-only} {
+                padding: 0 15px;
+            }
             @media #{$xxlarge-up} {
-                padding: 0 $helper-medium;
+               // padding: 0 $helper-medium;
             }
             &:before{
                 vertical-align: middle;

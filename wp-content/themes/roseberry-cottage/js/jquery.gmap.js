@@ -43,7 +43,10 @@ $.fn.gmap = function(options){
         scaleControl:true,
         streetViewControl:true,
         overviewMapControl:true,
-        rotateControl:true
+        centerMapToPinOnClick:true,
+        rotateControl:true,
+        fitBounds:false,
+        centerMapToPins:false
 		};
 	
 	var options = $.extend(defaults,options);
@@ -73,8 +76,11 @@ $.fn.gmap = function(options){
 			//centerLng = options.markers[0].longitude
 		}
 		//Set the map
-			var bounds = new google.maps.LatLngBounds();
-		latlng = new google.maps.LatLng(centerLat,centerLng);
+			
+
+		
+
+
 		//latlng = new google.maps.LatLng(0,0);
 		var mapOptions = {
 				zoom: options.zoom, // This number can be set to define the initial zoom level of the map
@@ -87,14 +93,35 @@ $.fn.gmap = function(options){
          		scaleControl:true,
          		streetViewControl:true,
          		overviewMapControl:true,
-         		fitBounds:false,
          		rotateControl:true,
+         		//fitBounds:true,
 				mapTypeId: eval('google.maps.MapTypeId.'+ options.mapType),// This value can be set to define the map type ROADMAP/SATELLITE/HYBRID/TERRAIN
 				//styles: [{"featureType":"administrative","elementType":"all","stylers":[{"visibility":"on"},{"saturation":-100},{"lightness":20}]},{"featureType":"road","elementType":"all","stylers":[{"visibility":"on"},{"saturation":-100},{"lightness":40}]},{"featureType":"water","elementType":"all","stylers":[{"visibility":"on"},{"saturation":-10},{"lightness":30}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":-60},{"lightness":10}]},{"featureType":"landscape.natural","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":-60},{"lightness":60}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"},{"saturation":-100},{"lightness":60}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"},{"saturation":-100},{"lightness":60}]}]
 				//styles: [{"stylers":[{"saturation":-100},{"gamma":1}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi.place_of_worship","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"poi.place_of_worship","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"water","stylers":[{"visibility":"on"},{"saturation":50},{"gamma":0},{"hue":"#50a5d1"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text.fill","stylers":[{"color":"#333333"}]},{"featureType":"road.local","elementType":"labels.text","stylers":[{"weight":0.5},{"color":"#333333"}]},{"featureType":"transit.station","elementType":"labels.icon","stylers":[{"gamma":1},{"saturation":50}]}]
 			};
 		var map = new google.maps.Map(document.getElementById($id),mapOptions);
-		
+		var bounds = new google.maps.LatLngBounds();
+
+/*
+		if(options.centerMapToPins){
+			console.log('ok')
+		//var LatLngList = new Array (new google.maps.LatLng (52.537,-2.061), new google.maps.LatLng (52.564,-2.017));
+		//  Create a new viewpoint bound
+
+		var LtLgLen = options.markers.length;
+		//  Go through each...
+		for (var i = 0 ; i < LtLgLen; i++) {
+  		//  And increase the bounds to take this point
+  		LatLng = new google.maps.LatLng(options.markers[i]['latitude'],options.markers[i]['longitude'])
+  		bounds.extend(LatLng);
+		}
+		//  Fit these bounds to the map
+		map.fitBounds(bounds);
+ 		} else {
+			latlng = new google.maps.LatLng(centerLat,centerLng);
+ 		}
+	*/
+
 		if(options.route){
 			var rendererOptions = { map: map };
    			directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);
@@ -197,8 +224,17 @@ var _markers = [];
 		} else {
 
 			google.maps.event.addListener(marker,'click',function() {
+				if(options.centerMapToPinOnClick){
+					map.setCenter(this.getPosition());
+				}
+		 		 infowindow.setContent(this.html);
+				infowindow.open(map,this);
+			});
 
-				map.setCenter(this.getPosition());
+				google.maps.event.addListener(marker,'mouseover',function() {
+				/*if(options.centerMapToPinOnClick){
+					map.setCenter(this.getPosition());
+				}*/
 		 		 infowindow.setContent(this.html);
 				infowindow.open(map,this);
 			});
@@ -251,8 +287,13 @@ var _markers = [];
 // end of function to control size of marker when zoomed
 
 		if(options.markers.length>1){
-    		if(options.fitBounds) map.fitBounds(bounds);
-    	}
+    		if(options.fitBounds){
+    			map.fitBounds(bounds);
+    		} else {
+    		latlng = new google.maps.LatLng(centerLat,centerLng);
+    		map.setCenter(latlng);
+    			}
+    	} 
 }
 		function createInfo(title,content){
 			return '<div class="infowindow" style="width:300px; height:auto;"><strong>'+ title +'</strong><br />'+content+'</div>';

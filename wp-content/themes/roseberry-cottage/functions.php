@@ -15,11 +15,12 @@ get_template_part('includes/menus');
 get_template_part('includes/images');
 //get_template_part('includes/email');
 //Classes
+*/
 
 add_editor_style('css/style.css');
 add_editor_style('css/editor-style.css');
 
-
+/*
 function get_excerpt($post,$count){
 
   $permalink = get_permalink($post->ID);

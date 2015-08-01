@@ -3,18 +3,18 @@ aside#off-canvas{
 	position: fixed;
 	@include font-size(12px);
 	top:0;
-	right:-250px;
+	right:-280px;
 	z-index:9998;
 	padding: 40px 0 0;
 	height: 100%;
-	width: 250px;
+	width: 280px;
 	background-color:rgba(69,116,127,.9);
 	padding: $helper-thicker $helper-medium;
 	.scroll{
 		width:100%;
 		height:100%;
 		display: block;
-		overflow-y: scroll;
+		//overflow-y: scroll;
 	}
 	nav{
 		margin-bottom: 60px;
@@ -45,6 +45,12 @@ aside#off-canvas{
 			&:hover,&:active{
 				color: white;
 			}
+		}
+	}
+	address{
+		display: none;
+		@media #{$medium-up} { 
+			display: block;
 		}
 	}
 }

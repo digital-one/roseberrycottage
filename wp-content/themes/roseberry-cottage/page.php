@@ -1,45 +1,48 @@
-<?php /* Template Name: Standard */ ?>
 <?php get_header() ?>
-	<div id="content" class="row">
-<!--main content-->
-<main id="main" role="main" class="small-12 medium-9 columns">
-<div class="row">
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+	
+	<?php get_template_part('partials/content','slideshow' ); ?>
 
-<!--article-->
-<div class="small-12 columns bottom-spaced box padding-2x end">
-	<div class="box-outer">
-	<?php
-if(have_posts()):
-while (have_posts() ) : the_post(); 
-?>
-<article class="dotted-links">
-	<div class="box-content<?php if(!has_post_thumbnail(get_the_ID())): ?> no-bottom-padding<?php endif ?>">
-<header>
-<h1><strong><?php the_title() ?></strong></h1>
-</header>
-<?php the_content() ?>
+<?php /*
+	 <section class="bg-image-break centered-text"  data-parallax="scroll">  
+		<div class="outer-wrapper">
 
-</div>
-<footer class="box-content">
-<menu class="share"><span>Share:</span><ul class="share"><li class="twitter"><a href="#">Twitter</a></li><li class="facebook"><a href="">Facebook</a></li></ul></menu>
-</footer>
-</article>
+
+
+		</div>
+		<span  style="background-image:url('<?php echo get_template_directory_uri(); ?>/images/house-exterior.jpg');"></span>
+</section>
+*/ ?>
 <?php
-endwhile;
-endif;
-wp_reset_query();
+	$intro_heading =  get_field('intro_heading');
+	$intro = get_field('intro');
+	$no_intro = false;
+	if(empty($intro) and empty($intro_heading)) $no_intro = true;
+	$section_class  = $no_intro ? ' no-intro' : '';
 ?>
+<section class="offset-section<?php echo $section_class ?> centered-text dotted-links">
+	<div class="row main-container">
+		<div class="small-12 medium-11 medium-centered xlarge-11 xxlarge-10 columns">
+			<header class="section intro<?php if(empty($intro)):?> no-intro-text<?php endif ?>">
+			<h1 class="underline-hd"><?php the_title() ?></h1>
+<h2><?php echo $intro_heading ?></h2>
+<?php
+if(!empty($intro)):
+echo $intro;
+endif;
+?>
+</header>
+<?php //the_content() ?>
+<?php get_template_part('partials/content','sections' ); ?>
+<?php get_template_part('partials/content','social-nav' ); ?>
 </div>
-</div>
-<!--/article-->
-</main>
-<!--/main content-->
-<!--sidebar-->
-<?php get_sidebar('page'); ?>
-<!--/sidebar-->
-</div>
-<!--/row-->
-<!--row-->
-<?php get_template_part('partials/content','contacts-bar' );  ?>
-<!--/row-->
+</section>
+
+<main>
 <?php get_footer() ?> 
+</div>
+<?php /* <div id="bg-image" style="background-image:url('<?php echo get_template_directory_uri(); ?>/images/house-exterior.jpg');"></div> */ ?>
+
+</main>
+<?php endwhile ?>
+<?php endif ?>

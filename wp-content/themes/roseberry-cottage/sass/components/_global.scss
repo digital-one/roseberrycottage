@@ -7,17 +7,44 @@
 .centered-text{
 	text-align: center;
 }
+.centered{
+	margin:0 auto !important; 
+}
 .left-text{
 	text-align: left;
+}
+.text-left{
+	h3,h4{
+		text-align: center;
+		.right-col &{
+			text-align: left;
+		}
+	}
+}
+.aligncenter {
+	margin: 0 auto;
+	display:inline-block;
+}
+aside.image{
+	margin-top:25px;
+	@media #{$medium-up} { 
+		margin-top:0;
+	}
+}
+aside.address{
+	margin-bottom: $helper-thick;
+	@media #{$medium-up} { 
+		margin-bottom:0;
+	}
 }
 .more{
 	font-family: $verlag-bold;
 	@include font-size(14px);
 	letter-spacing:2px;
 	display: inline-block;
-	padding: 10px 0 0;
+	padding: 5px 0 0;
 	@media #{$xxlarge-up} {
-		padding: 20px 0 0;
+		//padding: 20px 0 0;
 		font-size: $h4-font-size;
 	}
 	&.map{
@@ -40,6 +67,7 @@
 .underline-hd{
 	padding-bottom: $helper-standard;
 	margin-bottom: $helper-medium;
+
 	position: relative;
 	&:after{
 		content:"";
@@ -146,6 +174,13 @@ menu.social{
 	@include inline-menu;
 	margin:0 auto;
 	display: inline-block;
+	#footer &{
+		li:last-child{
+			@media #{$medium-up} {
+				padding-right: 0;
+			}
+		}
+	}
 	@media #{$medium-up} {
 		float: right;
 		margin:0;
@@ -183,6 +218,7 @@ menu.social{
 		#social &{
 			&:link,&:visited{
 				color: white;
+				border:none !important;
 				width:40px;
 				height:40px;
 				background-color: lighten($blue-grey,10%);
@@ -203,11 +239,24 @@ menu.social{
 .tinted-box{
 	background-color: $light-grey;
 }
+.dotted-links{
+	a:link,a:visited{
+		color: $dark-grey;
+		border-bottom:1px dotted $dark-grey;
+	}
+	a:hover,a:focus,a:active{
+		color: $blue-grey;
+		border-color: $blue-grey;
+	}
+}
 .bullet-list
 	li{
 		position: relative;
 		padding-left: 25px;
-		margin-bottom: 3px;
+		margin-bottom: 15px;
+		&:last-child{
+			margin-bottom: 0;
+		}
 		&:before{
 			content:"";
 			width:3px;

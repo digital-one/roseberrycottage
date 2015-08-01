@@ -1,4 +1,43 @@
+var isTouchDevice = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isTouchDevice.Android() || isTouchDevice.BlackBerry() || isTouchDevice.iOS() || isTouchDevice.Opera() || isTouchDevice.Windows());
+    }
+};
+
+
 $(function(){
+
+//gallery
+
+  $(".fancybox").fancybox({
+    openEffect  : 'none',
+    closeEffect : 'none'
+  });
+
+  $(".gallery").on('click',function(e) {
+    e.preventDefault();
+  $('.fancybox').eq(0).trigger('click');
+  if($('.right-off-canvas-toggle').hasClass('expanded')){
+    $('.right-off-canvas-toggle').trigger('click');
+  }
+
+});
+
 
 
  $('.scrollto').on('click',function(e){
@@ -11,20 +50,26 @@ $(function(){
         });
   })
 
-
-var _slides,
-    _slider = $('.slider'),
+var _slider = $('.slider'),
+     _slides = $('.parallax-mirror',_slider),
     _parallaxObj = $('.bg-image-break span.slide'),
+    _transitionSpeed = 1000,
     _preloadImgs = [];
+    if(isTouchDevice.any()){
+     var _slider = $('.slideshow');
+     var _slides = $('.slide',_slider);
+     var _transitionSpeed = 2000;
+    }
+
 
 //get all parallax images
   _parallaxObj.each(function(){
     _image = $(this).data('image');
     _preloadImgs.push(_image);
      $(this).parallax({imageSrc: _image});
-  })
+    })
+
 $.imgpreload(_preloadImgs,function(){
-  console.log('done')
   _slider.animate({
     'opacity':1
   },200,startSlider())
@@ -36,7 +81,11 @@ $.imgpreload(_preloadImgs,function(){
 //fade between parallax elements
 
 resortSlider = function(){
-  _slides = $('.parallax-mirror',_slider);
+    if(isTouchDevice.any()){
+  _slides = $('.slide',_slider);
+    } else {
+      _slides = $('.parallax-mirror',_slider);
+    }
    _zindex=100;
    _slides.each(function(){
     $(this).css({
@@ -53,8 +102,7 @@ setTimeout(function(){
   _targetSlide = _slides.eq(0);
   _targetSlide.animate({
     'opacity':0
-  },1000,function(){
-    console.log('done');
+  },_transitionSpeed,function(){
    _targetSlide.appendTo(_slider);
    _targetSlide.css({
     'opacity':1
@@ -96,20 +144,20 @@ $('.right-off-canvas-toggle').on('click',function(e){
   if($(this).hasClass('expanded')){
     $(this).removeClass('expanded');
     $('#off-canvas').animate({
-      'right': '-250px'
+      'right': '-280px'
     },function(){
-      $('body').css({
+     /* $('body').css({
         overflow:'scroll'
-      })
+      }) */
     })
     } else {
       $(this).addClass('expanded');
     $('#off-canvas').animate({
       'right': '0px'
     },function(){
-       $('body').css({
+   /*    $('body').css({
         overflow:'hidden'
-      })
+      }) */
     })
     }
    
@@ -147,7 +195,6 @@ var bookedDates = {};
        var bookedDates = {};
        if(_booked_dates[0]!=''){
   var booked_dates = _booked_dates.split(', ');
-  console.log(booked_dates);
   for(var i=0; i < booked_dates.length; i++){
      bookedDates[new Date(booked_dates[i])] = new Date(booked_dates[i]);
   }
@@ -253,7 +300,6 @@ function DisableSpecificDates(date) {
 refreshMap = function(){
 
 if($('#map').length){
-  console.log(Map.geocodes[0]);
    _markers = [{'latitude':54.0706773,'longitude':-1.6029694,'name':'Roseberry Cottage','content':'Roseberry Cottage','marker': Map.roseberry_marker,'marker_width':130,'marker_height':76,'marker_anchor_x':65,'marker_anchor_y':76}]; //add Roseberry Cottage Pin
    for(i=0;i<Map.geocodes.length;i++){
      _markers[i+1] = {'latitude':Map.geocodes[i].lat,'longitude':Map.geocodes[i].lng,'name':Map.geocodes[i].name,'content':Map.geocodes[i].name,'marker': Map.marker,'marker_width':47,'marker_height':53,'marker_anchor_x':23,'marker_anchor_y':53};
@@ -261,7 +307,7 @@ if($('#map').length){
        $('#map').gmap({
            markers: _markers,
            markerFile: Map.marker,
-           zoomMapOnMarkerClick: true,
+           zoomMapOnMarkerClick: false,
            //markerFileSmall: MarkerSmall,
           // markerSmallWidth:12,
            //markerSmallHeight:24,
@@ -271,6 +317,8 @@ if($('#map').length){
            markerHeight:53,
            markerAnchorX:24,
            markerAnchorY:53,
+           fitBounds:false,
+           centerMapToPinOnClick:true,
           // showInfoBoxOnLoad: true,
           // zoomMapOnMarkerClick: true,
            zoom:11,

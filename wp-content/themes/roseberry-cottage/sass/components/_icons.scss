@@ -11,7 +11,21 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
+.icon-clear:before {
+	content: "\e070";
+}
+.icon-close:before {
+	content: "\e600";
+}
+.icon-menu:before {
+	content: "\e120";
+}
+.icon-location:before {
+	content: "\e947";
+}
+.icon-calendar:before {
+	content: "\e953";
+}
 .icon-twitter:before {
 	content: "\f099";
 }
@@ -29,13 +43,4 @@
 }
 .icon-angle-right:before {
 	content: "\f105";
-}
-.icon-menu:before {
-	content: "\e120";
-}
-.icon-location:before {
-	content: "\e947";
-}
-.icon-calendar:before {
-	content: "\e953";
 }

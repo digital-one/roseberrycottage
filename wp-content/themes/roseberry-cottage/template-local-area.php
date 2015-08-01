@@ -4,16 +4,26 @@
 	<section id="map" class="bg-image-break centered-text">
 		<div class="outer-wrapper">
 
-map here
-
-		</div>
+</div>
 </section>
-<section class="offset-section centered-text">
+<?php
+	$intro_heading =  get_field('intro_heading');
+	$intro = get_field('intro');
+	$no_intro = false;
+	if(empty($intro) and empty($intro_heading)) $no_intro = true;
+	$section_class  = $no_intro ? ' no-intro' : '';
+?>
+<section class="offset-section<?php echo $section_class ?> centered-text">
 	<div class="row main-container">
-		<div class="small-12 large-10 medium-centered xlarge-9 columns">
-			<header class="section first intro">
-			<h1 class="underline-hd">LOCAL AREA</h1>
-<?php the_content() ?>
+		<div class="small-12 medium-11 medium-centered xlarge-11 xxlarge-10 columns">
+			<header class="section intro<?php if(empty($intro)):?> no-intro-text<?php endif ?>">
+			<h1 class="underline-hd"><?php the_title() ?></h1>
+<h2><?php echo $intro_heading ?></h2>
+<?php
+if(!empty($intro)):
+echo $intro;
+endif;
+?>
 </header>
 </div>
 <div class="grid row collapse">
@@ -125,10 +135,10 @@ endif;
 	
 			<footer class="section-footer"><h2><?php echo get_field('ob_heading') ?></h2><a href="<?php echo get_field('ob_button_link') ?>" title="<?php echo get_field('ob_button_label') ?>" class="button-outline-white"><?php echo get_field('ob_button_label') ?></a></footer>
 <div class="row">
-	<div class="small-10 small-centered columns">
+	<div class="xsmall-11 xsmall-centered small-10 small-centered columns">
 <section id="other-places" class="section divide mid">
 <h3 class="underline-hd">Other places worth a visit</h3>
-<ul class="small-block-1 large-block-grid-2 xlarge-block-grid-3 text-left">
+<ul class="small-block-1 large-block-grid-2 text-left">
 	<?php
 	 $args = array(
         'post_type'=>'cpt-location',
@@ -151,26 +161,13 @@ endif;
 </ul>
 <footer><a href="http://www.visitharrogate.co.uk" target="_blank" class="more arrow">VISIT LOCAL TOURIST INFORMATION</a></footer>
 </section>
-<section id="social" class="section last">
-	<h4>Follow us</h4>
-	<menu class="social"><ul><li><a href="" class="icon-twitter"></a></li><li><a href="" class="icon-facebook"></a></li><li><a href="" class="icon-google-plus"></a></li></ul></menu>
-</section>
+<?php get_template_part('partials/content','social-nav' ); ?>
 </div>
 </div>
 	</div>
 
 </section>
-<section id="mailing-list-form">
-	<div class="row main-container">
-		<div class="small-12 small-centered large-9 columns">
-<h2>Join our mailing list and stay in touch with the latest news and offers at Roseberry Cottage</h2>
-<?php
-//(id, display title, display desc, display inactive, field values, ajax, tab index)
-gravity_form(1, false, false, false, '', true, 1);
-?>
-</div>
-</div>
-</section>
+<?php get_template_part('partials/content','mailing-list-form' ); ?>
 <main>
 <?php get_footer() ?> 
 </div>

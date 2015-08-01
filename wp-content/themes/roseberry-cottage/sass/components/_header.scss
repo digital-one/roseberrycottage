@@ -19,13 +19,14 @@
 	display: block;
 	z-index:2;
 	.home &{
-		padding: $helper-thick 0 $helper-medium;
+		//padding: $helper-thick 0 $helper-medium;
+		padding: $helper-thick 0;
 	}
 
 	text-align: center;
 	h2{
 		margin-bottom: 0;
-		padding: 0 20px;
+		padding: 0;
 		@media #{$medium-up} { 
 			padding:0;
 		}
@@ -33,6 +34,10 @@
 }
 #home-link{
 	width: 220px;
+	img{
+		width: 100%;
+		height: auto;
+	}
 	.home &{
 		width:220px;	
 	}
@@ -49,6 +54,7 @@
 	@media #{$xxlarge-up} { 
 		.home &{
 			width:300px;
+			//margin-bottom: 0;
 			margin-bottom: $helper-thick;
 		}
 	}
@@ -74,6 +80,11 @@
 		line-height: 40px;
 		width:40px;
 		@include abs-pos(0,0,auto,auto);
+	}
+	&.expanded{
+		&:after{
+			content:"\e600";
+		}
 	}
 
 }

@@ -519,12 +519,12 @@ class acf
 		$scripts[] = array(
 			'handle'	=> 'acf-field-group',
 			'src'		=> $this->settings['dir'] . "js/field-group{$min}.js",
-			'deps'		=> array('jquery')
+			'deps'		=> array('jquery','jquery-ui-sortable')
 		);
 		$scripts[] = array(
 			'handle'	=> 'acf-input',
 			'src'		=> $this->settings['dir'] . "js/input{$min}.js",
-			'deps'		=> array('jquery', 'jquery-ui-core', 'jquery-ui-datepicker')
+			'deps'		=> array('jquery', 'jquery-ui-core', 'jquery-ui-datepicker','jquery-ui-sortable')
 		);
 		
 		

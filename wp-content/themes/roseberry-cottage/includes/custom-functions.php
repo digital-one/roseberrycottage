@@ -2,9 +2,9 @@
 
 function admin_scripts_and_styles(){
   global $post;
-  wp_deregister_script( 'jquery' );
-    wp_register_script( 'jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", false, null );
-    wp_enqueue_script( 'jquery' );
+ // wp_deregister_script( 'jquery' );
+  wp_register_script( 'jquery-js', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", array(),'1.10.2', false);
+   wp_enqueue_script( 'jquery-js' );
    wp_register_script( 'jquery-ui', "http://code.jquery.com/ui/1.11.4/jquery-ui.js",array(),'1.11.4', false);
     wp_enqueue_script( 'jquery-ui' );
     wp_register_script( 'multidatespicker', get_template_directory_uri().'/js/multidatepicker/jquery-ui.multidatespicker.js', array(), null, false );
@@ -77,7 +77,11 @@ wp_enqueue_script( 'foundation-offcanvas' );
         wp_register_script( 'imgpreload', get_stylesheet_directory_uri() . '/js/jquery.imgpreload.min.js', array(), null, false );
       wp_enqueue_script( 'imgpreload' );
 
-
+      //fancybox
+      wp_register_style( 'fancybox-css', get_stylesheet_directory_uri() . '/js/fancybox/jquery.fancybox.css', array(), '', 'all' );
+      wp_enqueue_style( 'fancybox-css' );
+      wp_register_script( 'fancybox', get_stylesheet_directory_uri() . '/js/fancybox/jquery.fancybox.pack.js', array(), null, false );
+      wp_enqueue_script( 'fancybox' );
 
   		//easing
   		wp_register_script( 'easing', get_stylesheet_directory_uri() . '/js/jquery.easing.min.js', array(), null, false );
@@ -88,13 +92,13 @@ wp_enqueue_script( 'foundation-offcanvas' );
 		wp_register_script( 'scrollto', get_stylesheet_directory_uri() . '/js/jquery.scrollTo.min.js', array(), null, false );
   		wp_enqueue_script( 'scrollto' );
 
-  		wp_register_script( 'gforms_validation', get_stylesheet_directory_uri() . '/js/jquery.gforms.validation.js', array(), null, false );
-  		wp_enqueue_script( 'gforms_validation' );
+  	//	wp_register_script( 'gforms_validation', get_stylesheet_directory_uri() . '/js/jquery.gforms.validation.js', array(), null, false );
+  	//	wp_enqueue_script( 'gforms_validation' );
 
   		//jquery cookie
 
-  		wp_register_script( 'jquery_cookie', get_stylesheet_directory_uri() . '/js/jquery.cookie.js', array(), null, false );
-  		wp_enqueue_script( 'jquery_cookie' );
+  	//	wp_register_script( 'jquery_cookie', get_stylesheet_directory_uri() . '/js/jquery.cookie.js', array(), null, false );
+  	//	wp_enqueue_script( 'jquery_cookie' );
 
     wp_register_style( 'jquery-ui-css', get_stylesheet_directory_uri() . '/css/jquery-ui.css', array(), '', 'all' );
     wp_enqueue_style( 'jquery-ui-css' );
@@ -258,9 +262,10 @@ add_action('admin_head', 'fix_svg');
 
 function register_menus() {
 	  register_nav_menus(
-	    array( 	'main-menu'	   => __( 'Main Menu' )
-	   	)
-	  );
+	    array( 	'main-menu'	   => __( 'Main Menu' ),
+              'footer-menu'    => __( 'Footer Menu' )
+	        )
+      );
 	}
 	
 add_action( 'init', 'register_menus' );
@@ -397,45 +402,65 @@ if (isset($_POST["update_theme_options"])) {
 }
 
 function save_theme_options(){
+    $address_title = esc_attr($_POST["address_title"]);
     $address_line_1 = esc_attr($_POST["address_line_1"]);
     $address_line_2 = esc_attr($_POST["address_line_2"]);
     $address_line_3 = esc_attr($_POST["address_line_3"]);
+    $address_postcode = esc_attr($_POST["address_postcode"]);
     $telephone = esc_attr($_POST["telephone"]);
-    $fax = esc_attr($_POST["fax"]);
     $email = esc_attr($_POST["email"]);
     $twitter = esc_attr($_POST["twitter"]);
-    $footer_disclaimer = esc_attr($_POST["footer_disclaimer"]);
-    $location_url= esc_attr($_POST["location_url"]);
-  
+    $facebook = esc_attr($_POST["facebook"]);
+    $gplus = esc_attr($_POST["gplus"]);
+    $trip_advisor_url = esc_attr($_POST["trip_advisor_url"]);
+    $ydnp_url = esc_attr($_POST["ydnp_url"]);
+    $wty_url = esc_attr($_POST["wty_url"]);
+    update_option("address_title", $address_title);
     update_option("address_line_1", $address_line_1);
     update_option("address_line_2", $address_line_2);
     update_option("address_line_3", $address_line_3);
+    update_option("address_postcode", $address_postcode);
     update_option("telephone", $telephone);
-    update_option("fax", $fax);
     update_option("email", $email);
     update_option("twitter", $twitter);
-    update_option("footer_disclaimer", $footer_disclaimer);
-    update_option("location_url", $location_url);
+    update_option("facebook", $facebook);
+    update_option("gplus", $gplus);
+    update_option("trip_advisor_url", $trip_advisor_url);
+    update_option("ydnp_url", $ydnp_url);
+    update_option("wty_url", $wty_url);
 }
 
 function theme_options(){
+    $address_title = get_option("address_title");
     $address_line_1 = get_option("address_line_1");
     $address_line_2 = get_option("address_line_2");
     $address_line_3 = get_option("address_line_3");
+    $address_postcode = get_option("address_postcode");
     $telephone = get_option("telephone");
-    $fax = get_option("fax");
     $email = get_option("email");
     $twitter = get_option("twitter");
-    $footer_disclaimer = get_option("footer_disclaimer");
-    $location_url = get_option("location_url");
-
+    $facebook = get_option("facebook");
+    $gplus = get_option("gplus");
+    $trip_advisor_url = get_option("trip_advisor_url");
+    $ydnp_url = get_option("ydnp_url");
+    $wty_url = get_option("wty_url");
     ?>
         <div class="wrap">
-        <?php screen_icon('themes'); ?> <h2>Contact Details</h2>
+        <?php screen_icon('themes'); ?> 
  
         <form method="POST" action="">
+          <h2>Contact Details</h2>
             <table class="form-table">
-                
+                <tr valign="top">
+                    <th scope="row">
+                        <label for="address_title">
+                            Address Title:
+                        </label> 
+                    </th>
+                    <td>
+                        <input type="text" name="address_title" class="widefat" size="100" value="<?php echo $address_title;?>"  />
+                    </td>
+                </tr>
                   <tr valign="top">
                     <th scope="row">
                         <label for="address_line_1">
@@ -466,7 +491,16 @@ function theme_options(){
                         <input type="text" name="address_line_3" class="widefat" size="100" value="<?php echo $address_line_3;?>"  />
                     </td>
                 </tr>
-                
+                <tr valign="top">
+                    <th scope="row">
+                        <label for="address_postcode">
+                            Postcode:
+                        </label> 
+                    </th>
+                    <td>
+                        <input type="text" name="address_postcode" class="widefat" size="100" value="<?php echo $address_postcode;?>"  />
+                    </td>
+                </tr>
                  <tr valign="top">
                     <th scope="row">
                         <label for="telephone">
@@ -475,16 +509,6 @@ function theme_options(){
                     </th>
                     <td>
                         <input type="text" name="telephone" class="widefat" size="100" value="<?php echo $telephone;?>"  />
-                    </td>
-                </tr>
-                <tr valign="top">
-                    <th scope="row">
-                        <label for="fax">
-                            Fax:
-                        </label> 
-                    </th>
-                    <td>
-                        <input type="text" name="fax" class="widefat" size="100" value="<?php echo $fax;?>"  />
                     </td>
                 </tr>
                  <tr valign="top">
@@ -497,6 +521,9 @@ function theme_options(){
                         <input type="text" name="email" class="widefat" size="100"  value="<?php echo $email;?>"  />
                     </td>
                 </tr>
+              </table>
+                <h2>Social</h2>
+            <table class="form-table">
                 <tr valign="top">
                     <th scope="row">
                         <label for="twitter">
@@ -507,26 +534,60 @@ function theme_options(){
                         <input type="text" name="twitter" class="widefat" size="100"  value="<?php echo $twitter;?>"  />
                     </td>
                 </tr>
-                  <tr valign="top">
+                 <tr valign="top">
                     <th scope="row">
-                        <label for="charity_no">
-                            Footer Disclaimer:
+                        <label for="facebook">
+                            Facebook:
                         </label> 
                     </th>
                     <td>
-                    	<textarea name="footer_disclaimer"  class="widefat" cols="20" rows="5"><?php echo stripslashes($footer_disclaimer) ?></textarea>
+                        <input type="text" name="facebook" class="widefat" size="100"  value="<?php echo $facebook;?>"  />
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row">
+                        <label for="gplus">
+                            Google Plus:
+                        </label> 
+                    </th>
+                    <td>
+                        <input type="text" name="gplus" class="widefat" size="100"  value="<?php echo $gplus;?>"  />
+                    </td>
+                </tr>
+              </table>
+                <h2>Footer</h2>
+            <table class="form-table">
+                  <tr valign="top">
+                    <th scope="row">
+                        <label for="trip_advisor_url">
+                            Trip Advisor:
+                        </label> 
+                    </th>
+                   <td>
+                        <input type="text" name="trip_advisor_url" class="widefat" size="100"  value="<?php echo $trip_advisor_url;?>"  />
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row">
+                        <label for="ydnp_url">
+                            Yorkshire Dales National Park:
+                        </label> 
+                    </th>
+                   <td>
+                        <input type="text" name="ydnp_url" class="widefat" size="100"  value="<?php echo $ydnp_url;?>"  />
                     </td>
                 </tr>
                  <tr valign="top">
                     <th scope="row">
-                        <label for="location_url">
-                            Google Maps URL:
+                        <label for="wty_url">
+                            Welcome to Yorkshire:
                         </label> 
                     </th>
-                    <td>
-                        <input type="text" name="location_url" size="100" class="widefat" value="<?php echo $location_url;?>"  />
+                   <td>
+                        <input type="text" name="wty_url" class="widefat" size="100"  value="<?php echo $wty_url;?>"  />
                     </td>
                 </tr>
+              
                 <tr><td>
     <input type="submit" value="Save Options" class="button-primary"/></td></tr>
             </table>

@@ -26,17 +26,20 @@
 		border-top:1px solid darken(white,40%);
 		padding: 15px 0;
 		small{
-			
-			height:30px;
-			line-height: 30px;
+			margin-bottom: 20px;
 			@media #{$medium-up} {
 				float: left;
+				height:30px;
+				line-height: 30px;
+				margin-bottom: 0;
 			}
 		}
 	}
 	p{
 		margin-bottom: 0;
-		z-index: 2;
+		z-index: 998;
+		display: inline-block;
+		position: relative;
 		@include font-size(12px);
 		@media #{$medium-up} {
 			@include font-size(14px);
@@ -44,10 +47,16 @@
 		font-family: $verlag-book;
 	}
 }
+#footer-center{
+	width:auto;
+	display:inline-block;
+	margin:0 auto;
+}
 nav#footer-links{
 	@include centered-menu;
 	font-family: $verlag-bold;
 	margin-bottom: 10px;
+	text-transform:uppercase;
 	z-index: 2;
 	position: relative;
 	ul{

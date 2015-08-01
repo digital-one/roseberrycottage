@@ -1,20 +1,23 @@
+
+
+
 .main-container{
 	width:100%;
 	padding: 0;
 	@media #{$small-up} { 
-		max-width: em-calc(449);
+		max-width: em-calc(461);
 	}
 	@media #{$medium-up} { 
-		max-width: em-calc(569);
+		max-width: em-calc(540);
 	}
 	@media #{$large-up} { 
-		max-width: em-calc(740);
+		max-width: em-calc(708);
 	}
 	@media #{$xlarge-up} { 
-		max-width: em-calc(962);
+		max-width: em-calc(932);
 	}
 	@media #{$xxlarge-up} { 
-		max-width: em-calc(1160);   
+		max-width: em-calc(1200);   
 	}
 }
 .main-section{
@@ -22,20 +25,74 @@
 	// /padding-top:108px;
 }
 .section{
-	padding: 0 0 $helper-thick;
+	padding: $helper-thick 0;
+	&:first-child{
+		//padding-top:0;
+	}
+	&.intro{
+		padding-top: $helper-standard;
+		.no-intro &{
+			padding-bottom:0;
+		}
+		&.no-intro-text{
+			//padding-bottom:0;
+			h2{
+				margin-bottom: 0;
+			}
+		}
+	}
 	&.mid{
 		padding-top: $helper-thick;
+		.page-template-template-contact &{
+			padding-top: 0;
+		}
+		.page-template-default &{
+			padding-top: $helper-standard;
+		}
+	}
+	.page-template-template-tariffs &{
+		&.intro{
+			padding-bottom:0;
+		}
+		&#rates{
+			padding-top:0;
+		}
+	}
+	&#quote{
+		padding: $helper-standard 10px;
+		@media #{$medium-up} { 
+			padding: $helper-thick;
+		}
 	}
 	&.first{
-		padding-top: $helper-standard;
+		.no-intro &{
+			padding-top:15px;
+		}
+		//padding-top: 0;
 		padding-bottom: $helper-thick;
+		.page-template-template-contact &{
+			padding-top:0;
+			padding-bottom: 0;
+		}
+		.page-template-template-about &{
+			h2{
+				padding: 0 $helper-standard;
+				@media #{$medium-up} { 
+					padding: 0 $helper-thick;
+				}
+			}
+		}
+		.page-template-default &{
+			//padding-bottom: 0;
+		}
 	}
 	&.last{
 		padding-bottom: $helper-standard;
 	}
 	&.divide{
 		border-bottom: 1px solid $light-grey;
-		margin-bottom: $helper-thick;
+		
+		//margin-bottom: $helper-thick;
 	}
 }
 .wrapper{

@@ -64,6 +64,12 @@
 	    $offset:1
 	  );
 	}
+	.xsmall-centered{
+		margin-left: auto !important;
+    	margin-right: auto !important;	
+    	float:none;
+	}
+	
 	.hide-for-xsmall-only{
 		display: none;
 	}

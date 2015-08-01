@@ -1,0 +1,114 @@
+/* 0 - 480px */
+/* 481px, 600px */
+/* 601px, 767px */
+/* 768px, 992px */
+/* 993px, 1260px */
+/* 1260px, ... */
+/* Typography */
+/* Helpers */
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/* line 11, ../sass/helpers/classes/_clearfix.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 16, ../sass/helpers/classes/_clearfix.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/* line 23, ../sass/helpers/classes/_clearfix.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/*
+@mixin font-size($sizeValue: 12 ){
+  font-size: $sizeValue + px; //fallback for old browsers
+  //font-size: (0.125 * $sizeValue) + rem;
+  font-size: (($sizeValue/100)*10) + rem;
+}
+
+@mixin font-size-vw($vwSize: 2,$pxSize: 14){
+	font-size: $pxSize+px;
+	font-size: $vwSize+vw;
+}
+*/
+/*
+.box-shadow ($string: 0px 0px 5px 0px rgba(50, 50, 50, 0.75));
+*/
+/* line 3, ../sass/editor-style.scss */
+body {
+  background-color: white;
+}
+
+/* line 7, ../sass/editor-style.scss */
+a:link, a:visited {
+  color: #1d1d1d;
+  border-bottom: 1px dotted #1d1d1d;
+}
+
+/* line 11, ../sass/editor-style.scss */
+a:hover, a:focus, a:active {
+  color: #67aebf;
+  border-color: #67aebf;
+}
+
+/* line 17, ../sass/editor-style.scss */
+ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 15px;
+}
+/* line 21, ../sass/editor-style.scss */
+ul li:last-child {
+  margin-bottom: 0;
+}
+/* line 24, ../sass/editor-style.scss */
+ul li:before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  display: block;
+  background-color: #67aebf;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  top: 12px;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  position: absolute;
+}
+/* line 33, ../sass/editor-style.scss */
+ul li:after {
+  content: "";
+  width: 10px;
+  height: 1px;
+  display: block;
+  background-color: #67aebf;
+  top: 13px;
+  right: auto;
+  bottom: auto;
+  left: 3px;
+  position: absolute;
+}

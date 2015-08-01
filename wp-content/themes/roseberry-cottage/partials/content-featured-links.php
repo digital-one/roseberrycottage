@@ -1,4 +1,4 @@
-<div class="grid row collapse">
+
 			<?php
 			if(get_field('featured_links_rptr')):
 				$rooms =  array(7,10);
@@ -21,6 +21,7 @@
 						case 'one_image_text_left':
 						?>
 						<!--row-->
+			<div class="grid row collapse">
 			<!--block-->
 			<div class="xsmall-12 medium-6 medium-push-6 xlarge-8 xlarge-push-4 columns"><div class="double box"><div class="inner-wrapper" style="background-image:url('<?php echo $src ?>');"></div></div></div>
 			<!--/block-->
@@ -49,12 +50,14 @@
 						<?php if($is_link or $is_anchor): ?></a><?php else: ?></div><?php endif ?>
 					</div></div>
 					<!--/block-->
+				</div>
 					<!--/row-->
 						<?php
 						break;
 						case 'one_image_text_right':
 						?>
 						<!--row-->
+						<div class="grid row collapse">
 						<!--block-->
 			<div class="xsmall-12 medium-6 xlarge-8 columns"><div class="double box"><div class="inner-wrapper" style="background-image:url('<?php echo $src ?>');"></div></div></div>
 			<!--/block-->
@@ -82,6 +85,7 @@
 						<?php if($is_link or $is_anchor): ?></a><?php else: ?></div><?php endif ?>
 					</div></div>
 					<!--/block-->
+				</div>
 					<!--/row-->
 						<?php
 						break;
@@ -89,6 +93,7 @@
 						?>
 						<?php list($src,$w,$h) = wp_get_attachment_image_src(get_sub_field('link_image'), 'square-image'); ?>
 						<?php list($src_2,$w,$h) = wp_get_attachment_image_src(get_sub_field('link_image_2'), 'square-image'); ?>
+						<div class="grid row collapse">
 							<!-- block -->
 					<div class="xsmall-12 medium-6 xlarge-4 show-for-xlarge-up hide-for-xsmall-only columns">
 				<div class="box">
@@ -130,6 +135,7 @@
 					
 					</div></div>
 					<!-- /block -->
+				</div>
 						<?php
 						break;
 					}
@@ -137,4 +143,4 @@
 				<?php endwhile;
 				endif;
 				?>	
-					</div>
+					
