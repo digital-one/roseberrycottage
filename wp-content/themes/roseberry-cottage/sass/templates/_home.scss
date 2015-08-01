@@ -103,12 +103,17 @@
 
 .bg-image-break{
 	//@include bg-cover;
+	background:url('../images/preloader.gif') center center no-repeat;
+	&.loaded{
+		background:none;
+	}
 	span{
 		@include abs-pos(-2%,0,0,0);
 		display: block;
 		//background: #f6f6f5 no-repeat fixed center;
     //background-size: 100% auto;
     //@include bg-cover;
+    z-index: 998;
 	}
 	.home &{
 		margin-top:-20px;

@@ -73,6 +73,7 @@ $.imgpreload(_preloadImgs,function(){
   _slider.animate({
     'opacity':1
   },200,startSlider())
+  $('.slider').addClass('loaded');
 });
 
 

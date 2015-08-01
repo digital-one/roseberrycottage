@@ -276,5 +276,6 @@ menu.social{
 		}
 	}
 .slider{
-	@include opacity(0);
+	@include opacity(1);
+	z-index: 999;
 }
